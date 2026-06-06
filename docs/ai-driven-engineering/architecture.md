@@ -1,466 +1,301 @@
-# AI-Driven Data Engineering — Architecture Reference
+# AI-Driven Data Engineering — Enterprise Architecture Blueprint
+
+## Executive Overview
+This document defines the end-to-end blueprint for an enterprise-grade, AI-driven data engineering platform. The platform establishes a collaborative environment where a multi-agent AI swarm works directly alongside human engineers inside an integrated development environment (IDE). 
+
+The platform uses the Model Context Protocol (MCP) to safely discover source systems, runs automated transpilation and data quality gates within a centralized CI/CD pipeline, and deploys governed, optimized data assets onto unified modern data platforms.
+
+---
+
+## Part 1: The 5-Layer End-to-End Architecture Flow  ### Layer 1: Enterprise Sources & Ingestion
+The ingestion layer connects directly to production source systems, abstracting both batch enterprise data and high-frequency streaming events.
+* **Core Systems:** SAP ERP, Salesforce CRM, Legacy SQL Server instances, and real-time Webhooks/APIs.
+* **Ingestion Engines:** * *Batch/Micro-batch:* Sling CLI, Azure Data Factory (ADF).
+    * *Streaming:* Apache Kafka, Azure Event Hubs.
+
+### Layer 2: Model Context Protocol (MCP) Gateway
+The MCP Gateway provides a secure, bi-directional communication layer between the development workspace and enterprise metadata, schemas, and documentation.
+* **SAP Metadata MCP Server:** Connects directly to the SAP operational data provisioning layer to extract cryptic tables and translate field definitions.
+* **Salesforce API MCP Server:** Exposes CRM object models, custom fields, and relationship properties to the workspace safely.
+* **SQL Schema MCP Server:** Dynamically queries system catalogs and DDL definitions from legacy databases.
+* **Enterprise Knowledge Base MCP Server:** Surfaces internal architecture specifications, corporate data dictionaries, and engineering runbooks out of JIRA and Confluence.
+* **Data Lineage & Fabric Copilot API Servers:** Provide live runtime context, operational data execution history, and active platform metrics.
+
+### Layer 3: Collaborative Agent Workspace (VS Code)
+The development environment acts as a collaborative cockpit where human engineers interact with a multi-agent engineering swarm.
+
+#### In-IDE AI Coding Assistants
+* **GitHub Copilot (Agent Mode):** Provides inline code completions, text-based chat, and semi-autonomous script generation.
+* **Claude Code:** A terminal-based developer agent used for multi-file editing, structural refactoring, and local code execution.
+* **Cursor AI & Cline:** Background agents that monitor workspace files to implement software modifications autonomously.
+* **OpenCode & Codex CLI:** Task routing engines and terminal-based natural language interpreters.
+
+#### Managed Multi-Agent Swarm Roles
+* **Business Analyst Agent (Orchestrated via LangGraph):** Translates broad business criteria into precise technical specifications and acceptance criteria.
+* **Data Architect Agent (Orchestrated via Semantic Kernel):** Designs data schemas, reviews semantic models, and authors structural Architecture Decision Records (ADRs).
+* **Scrum Master Agent (Orchestrated via LlamaIndex Workflows):** Manages project sprint pacing, updates task statuses, and syncs project backlogs automatically with JIRA.
+* **Data Engineer Agent (Orchestrated via CrewAI):** Generates execution code, authors dbt models, configures pipelines, and writes infrastructure-as-code files.
+* **QA Engineer Agent (Orchestrated via AutoGen):** Generates automated validation test scripts, reviews data profiles, and verifies edge-case parameters.
+
+### Layer 4: CI/CD Testing & Security Validation Gates
+When code changes are pushed to source control (GitHub / Azure DevOps), they must pass a series of automated quality gates before production deployment. ### Layer 5: Unified Target Platforms & Governance
+The final production layer comprises modern cloud data ecosystems, governed by a unified security framework.
+
+#### Target Ecosystem A: Microsoft Fabric (SaaS Platform)
+* **OneLake:** A unified logical data lake that stores all enterprise data assets in open Delta Lake formats.
+* **Fabric Data Factory:** Orchestrates low-code data ingestion pipelines and schedules activities.
+* **Fabric Data Engineering & Warehouse:** High-performance Synapse Spark notebooks and scalable SQL Warehouses.
+* **Real-Time Intelligence:** Captures, parses, and acts upon fast-moving event streams via KQL event streams.
+* **Power BI (Direct Lake Mode):** Connects reporting dashboards directly to OneLake Delta tables, delivering fast query performance without separate data refreshes.
+
+#### Target Ecosystem B: Databricks Lakehouse (PaaS Platform)
+* **Unity Catalog:** Provides fine-grained, centralized data governance for files, tables, and AI models across clouds.
+* **Delta Live Tables (DLT):** Declarative pipelines that automate the deployment and scaling of high-performance data processing.
+* **Mosaic AI Framework:** Tools to build, evaluate, deploy, and monitor production-grade generative AI models and custom LLMs.
+
+#### Central Governance & Metadata Catalog
+* **Microsoft Purview & Alation:** Provides end-to-end data lineage tracking, enterprise search catalogs, and compliance rule enforcement across both target platforms.
+* **OpenLineage & Marquez:** Open-source framework that captures operational metadata from active processing pipelines in real time.
+
+---
+
+## Part 2: Technical Tool & Library Inventory
+
+### AI Agent Frameworks & Execution
+* **LangGraph / LangGraph Cloud:** State-controlled, cyclic graph orchestration ideal for complex business logic and multi-agent interaction loops.
+* **CrewAI / CrewAI Enterprise:** Role-driven agent systems optimized for sequential execution workflows.
+* **AutoGen:** Multi-agent conversation frameworks that allow complex, collaborative problem-solving.
+* **Semantic Kernel:** Enterprise-grade SDK developed by Microsoft to integrate LLMs into traditional codebases.
+* **LlamaIndex Workflows & LCEL:** Event-driven data processing frameworks and expressive component chains.
+* **Hermes Agent:** A scheduled micro-runner built to manage background agent tasks automatically.
+
+### Agent Toolkits & Libraries
+* **Composio & Toolhouse:** Integrates AI agents with third-party enterprise tools, authorization pathways, and external APIs.
+* **Browser Use:** Allows agents to interact with web interfaces, fill out forms, and navigate browser elements.
+* **LangChain Tools:** Specialized libraries that connect models with search engines, math tools, and local terminal execution wrappers.
+
+### Data Engineering Core Ecosystem
+* **Orchestration:** Apache Airflow, Dagster, Prefect, Azure Data Factory (ADF).
+* **Transformations:** dbt (Data Build Tool), Apache Spark (PySpark, Spark SQL).
+* **Quality & Profiling:** Great Expectations, Soda Core.
+* **Emerging AI-First Data Tools:** * *Sling:* Light, high-performance data syncing CLI.
+    * *SQLGlot:* Multi-dialect SQL parser, translator, and optimizer.
+    * *DuckDB & MotherDuck:* In-process analytical databases optimized for fast local query execution.
+    * *Evidence:* Code-based business intelligence frameworks for building data applications via markdown and SQL.
+
+### Infrastructure & Operations
+* **Terraform:** Infrastructure as Code (Ia laC) tool used to deploy cloud infrastructure repeatably.
+* **Docker & Kubernetes:** Containerization runtimes and orchestration platforms used to host custom agent applications.
+* **Ansible:** Automated configuration management and environment provisioning engine.
+* **Azure DevOps & GitHub Actions:** CI/CD runners, repository hosting, and project kanban tracking. # AI-Driven Data Engineering — Enterprise Architecture Reference
 
 ## Overview
 
-This document catalogs every component in the AI-driven data engineering architecture. The system is a **collaborative multi-agent engineering platform** where AI agents work alongside humans inside VS Code, orchestrated through CI/CD, connected to enterprise source systems via MCP, and governed by security review gates.
+This document serves as the comprehensive single-source blueprint for the AI-driven data engineering architecture[cite: 6]. It unifies the functional inventory from `architecture.md` with the complete end-to-end workflow topologies, systemic interactions, and lifecycle stages visually mapped out in `architecture.jpg`. 
 
+The system functions as an enterprise-grade **collaborative multi-agent engineering platform** where AI agents operate alongside humans inside VS Code[cite: 6]. The environment is orchestrated via secure CI/CD pipelines, integrated with source systems through the Model Context Protocol (MCP), managed via bidirectional Scrumboard synchronizations, and deployed across a Medallion pipeline converging into an AI-driven service layer[cite: 6].
 
 ---
 
-## 1. VS Code — AI Agent Workspace
+## 1. DevOps/JIRA Scrumboard (Sprint Lifecycle)
 
-VS Code is the **primary IDE** and serves as the collaborative workspace where AI agents operate alongside the human engineer.
+As mapped in `architecture.jpg`, the project management tracking layer sits adjacent to the development workspace, driving continuous alignment through an automated lifecycle loop.
 
-### AI Coding Assistants (in-IDE)
+### Sprint Board Lifecycle (AI-Managed)
+The system visualizes and tracks execution states across four definitive, automated stages: ### Sync Mechanism
+* **Bi-Directional Integration:** Operates via a dedicated **MCP Server Sync** pathway directly connecting the Scrumboard to the VS Code Workspace.
+* **Repo ──> DevOps/JIRA:** Structural specification modifications, code commits, and agent-calculated task updates automatically update issue tracking cards[cite: 6].
+* **DevOps/JIRA ──> Repo:** State transitions, user priority adjustments, and capacity changes feed directly into active agent context windows[cite: 6].
+
+---
+
+## 2. VS Code — AI Agent Workspace
+
+VS Code acts as the centralized **primary IDE** and localized collaborative execution cockpit where human developers work in tandem with an active multi-agent cluster[cite: 6]. ### AI Coding Assistants (In-IDE)
 
 | Tool | Role |
-|------|------|
-| **GitHub Copilot** | AI pair programmer — inline completions, chat, agent mode |
-| **Claude Code** | Terminal-based AI coding agent for complex tasks |
-| **OpenCode** | Open-source AI coding assistant with skill routing |
-| **Cursor AI** | AI-assisted coding with background agent |
-| **Cline** | AI coding assistant for autonomous task execution |
-| **Codex CLI** | OpenAI-powered terminal coding agent |
+| :--- | :--- |
+| **GitHub Copilot** | AI pair programmer — inline completions, chat, agent mode[cite: 6] |
+| **Claude Code** | Terminal-based AI coding agent for complex, multi-file tasks[cite: 6] |
+| **Cursor AI** | AI-assisted coding environment with a background execution agent[cite: 6] |
+| **Cline** | AI coding assistant optimized for autonomous multi-step task execution[cite: 6] |
+| **OpenCode** | Open-source AI coding assistant featuring built-in skill routing[cite: 6] |
+| **Codex CLI** | OpenAI-powered native terminal coding and command execution agent[cite: 6] |
 
-### Key VS Code Capabilities
-
-- Multi-agent collaboration (Business Analyst, Architect, Scrum Master, Data Engineer, QA Engineer agents all operate within VS Code)
-- MCP endpoint integration (knowledge bases, source systems, Fabric)
-- Extension-driven tool execution
-- Terminal integration for CLI tools (dbt, Airflow, Terraform, git)
-- Source control integration (GitHub, Azure DevOps)
+### Architecture Workflow Hierarchy
+1. **Input Interface:** User intents or code changes pass first through the **AI Coding Assistants** tier.
+2. **Orchestration:** Requests are routed directly down into the centralized **Agent Orchestrator** engine.
+3. **Delegation:** The Orchestrator decomposes instructions and delegates tasks downward to the target **Specialized Agents** cluster.
+4. **Outbound Actions:** 
+   * Local changes push outward via the **MCP Protocol** to active system servers.
+   * Finalized features issue code outputs via the **Commits Code** pathway into the CI/CD pipeline.
 
 ---
 
-## 2. Model Context Protocol (MCP) Servers
+## 3. Model Context Protocol (MCP) Servers
 
-MCP provides a **standardised interface** for AI agents to interact with tools and data sources. The following 38 MCP servers are configured across the development environment (Cursor, OpenCode, Cline).
-
-### Azure & Microsoft Cloud MCP
+The platform utilizes 38 configured MCP servers to establish a **standardized interface** for agents to query tools, access deep file systems, and explore enterprise ecosystems safely[cite: 6]. ### Azure & Microsoft Cloud MCP
 
 | Server | Command / URL | Purpose |
-|--------|---------------|---------|
-| **azure-mcp** | `npx @azure/mcp server start` | Azure Resource Manager, Fabric, AI services (env: `AZURE_FABRIC_ENABLED=true`) |
-| **fabric** | `npx @microsoft/fabric-mcp server start --mode all` | Microsoft Fabric — Lakehouses, Notebooks, Pipelines, Semantic Models |
-| **fabric-api** | `npx @einlogic/mcp-fabric-api` | Fabric REST API integration |
-| **microsoft365** | `npx @pnp/cli-microsoft365-mcp-server` | Microsoft 365 admin — users, groups, SharePoint, Teams |
-| **confluence** | `npx mcp-remote https://mcp.atlassian.com/v1/mcp/authv2` | Atlassian Confluence knowledge base access |
+| :--- | :--- | :--- |
+| **fabric** | `npx @microsoft/fabric-mcp server start --mode all` | Microsoft Fabric — Lakehouses, Notebooks, Pipelines, Semantic Models[cite: 6] |
+| **microsoft365** | `npx @pnp/cli-microsoft365-mcp-server` | Microsoft 365 administration — users, groups, SharePoint, Teams[cite: 6] |
+| **confluence** | `npx mcp-remote https://mcp.atlassian.com/v1/mcp/authv2` | Atlassian Confluence enterprise knowledge base access[cite: 6] |
+| **git** | `uvx mcp-server-git` | Native Git repository metadata and structural operations[cite: 6] |
+| **azure-mcp** | `npx @azure/mcp server start` | Azure Resource Manager, Fabric, AI services (env: `AZURE_FABRIC_ENABLED=true`)[cite: 6] |
+| **fabric-api** | `npx @einlogic/mcp-fabric-api` | Fabric REST API integration[cite: 6] |
 
 ### Database & Storage MCP
 
 | Server | Command / URL | Purpose |
-|--------|---------------|---------|
-| **postgres** | `npx @modelcontextprotocol/server-postgres` | PostgreSQL database (localhost:5432) |
-| **sqlite** | `uvx mcp-server-sqlite --db-path ...` | Local SQLite database (`.n8n/database.sqlite`) |
-| **mongodb** | `npx mongodb-mcp-server --readOnly` | MongoDB (10.26.0.6:27017, read-only) |
-| **filesystem** | `npx @modelcontextprotocol/server-filesystem` | Local file access (`C:\projects`, `Documents`, `Desktop`) |
+| :--- | :--- | :--- |
+| **postgres** | `npx @modelcontextprotocol/server-postgres` | PostgreSQL database connection (localhost:5432)[cite: 6] |
+| **sqlite** | `uvx mcp-server-sqlite --db-path ...` | Local SQLite analytical database instances (`.n8n/database.sqlite`)[cite: 6] |
+| **mongodb** | `npx mongodb-mcp-server --readOnly` | MongoDB document storage interface (10.26.0.6:27017, read-only)[cite: 6] |
+| **filesystem** | `npx @modelcontextprotocol/server-filesystem` | Local system storage file access (`C:\projects`, `Documents`, `Desktop`)[cite: 6] |
 
 ### Search & Web Research MCP
 
 | Server | Command / URL | Purpose |
-|--------|---------------|---------|
-| **tavily-search** | `npx tavily-mcp` | AI-powered web search (requires API key) |
-| **brave-search** | `npx @modelcontextprotocol/server-brave-search` | Brave search engine (requires API key) |
-| **fetch** | `uvx mcp-server-fetch` | URL fetching and content extraction |
-| **everything-search** | `uvx mcp-server-everything-search` | Universal desktop search |
+| :--- | :--- | :--- |
+| **tavily-search** | `npx tavily-mcp` | AI-powered technical web search optimization (requires API key)[cite: 6] |
+| **brave-search** | `npx @modelcontextprotocol/server-brave-search` | Brave search engine integration (requires API key)[cite: 6] |
+| **fetch** | `uvx mcp-server-fetch` | Inline web URL fetching and markdown content extraction[cite: 6] |
+| **browser** / **playwright** | `npx @playwright/mcp` | Browser automation — navigation, screenshots, DOM extraction, PDF generation[cite: 6] |
+| **puppeteer** | `npx @modelcontextprotocol/server-puppeteer` | Headless Chrome automation scripts[cite: 6] |
+| **everything-search** | `uvx mcp-server-everything-search` | Universal desktop indexing and global asset search[cite: 6] |
 
-### Browser Automation MCP
-
-| Server | Command | Purpose |
-|--------|---------|---------|
-| **playwright** | `npx @playwright/mcp` | Browser automation — navigation, screenshots, PDF generation |
-| **puppeteer** | `npx @modelcontextprotocol/server-puppeteer` | Headless Chrome automation |
-
-### Development & CI/CD MCP
+### DevOps & Productivity MCP
 
 | Server | Command / URL | Purpose |
-|--------|---------------|---------|
-| **github** | `npx @modelcontextprotocol/server-github` | GitHub API — repos, PRs, issues (requires PAT) |
-| **git** | `uvx mcp-server-git` | Git repository operations |
-| **docker** | `npx docker-mcp-server` | Docker container and image management |
-| **n8n** | `npx n8n-mcp` | Workflow automation (localhost:5678, Webhook security) |
-
-### Knowledge & Memory MCP
-
-| Server | Command / URL | Purpose |
-|--------|---------------|---------|
-| **memory** | `npx @modelcontextprotocol/server-memory` | Persistent agent memory (`memory.json`) |
-| **supermemory** | `https://mcp.supermemory.ai/mcp` | AI-powered memory and knowledge storage |
-| **context7** | `npx @upstash/context7-mcp` | Web context and content analysis |
-| **sequential-thinking** | `npx @modelcontextprotocol/server-sequential-thinking` | Chain-of-thought reasoning |
+| :--- | :--- | :--- |
+| **github** | `npx @modelcontextprotocol/server-github` | GitHub API interaction — repos, PR management, issues (requires PAT)[cite: 6] |
+| **docker** | `npx docker-mcp-server` | Container ecosystem, volume, and active image orchestration[cite: 6] |
+| **n8n** | `npx n8n-mcp` | Multi-app workflow automation (localhost:5678, Webhook security)[cite: 6] |
+| **memory** | `npx @modelcontextprotocol/server-memory` | Persistent local agent core graph memory tracking (`memory.json`)[cite: 6] |
+| **supermemory** | `https://mcp.supermemory.ai/mcp` | Cloud-scale AI memory and aggregated knowledge storage[cite: 6] |
+| **context7** | `npx @upstash/context7-mcp` | Web operational context and text content analysis[cite: 6] |
+| **sequential-thinking**| `npx @modelcontextprotocol/server-sequential-thinking` | Advanced multi-step chain-of-thought reasoning automation[cite: 6] |
 
 ### Document Processing MCP
 
 | Server | Command | Purpose |
-|--------|---------|---------|
-| **docconvert** | Python script (`pdf2odt_mcp_server.py`) | PDF to ODT document conversion |
-| **docling** | `uvx --from=docling-mcp docling-mcp-server` | Document parsing and analysis |
-| **markitdown** | `npx markitdown-mcp-npx` | Document format conversion |
-| **pdf2docx** | `npx @youhaozhao/pdf2docx-mcp` | PDF to DOCX conversion |
-| **md-pdf** | `npx md-pdf-mcp` | Markdown to PDF conversion |
+| :--- | :--- | :--- |
+| **docconvert** | Python script (`pdf2odt_mcp_server.py`) | Specialized PDF to ODT document conversion[cite: 6] |
+| **docling** | `uvx --from=docling-mcp docling-mcp-server` | High-fidelity document structural parsing and analysis[cite: 6] |
+| **markitdown** | `npx markitdown-mcp-npx` | Multi-format legacy file to Markdown conversion[cite: 6] |
+| **pdf2docx** | `npx @youhaozhao/pdf2docx-mcp` | PDF structural conversion into Microsoft Word files[cite: 6] |
+| **md-pdf** | `npx md-pdf-mcp` | Markdown documentation rendering into production PDFs[cite: 6] |
 
-### Productivity & Automation MCP
+### Automation, Utilities & Remote SaaS MCPs
 
-| Server | Command / URL | Purpose |
-|--------|---------------|---------|
-| **composio** | `npx mcp-remote https://connect.composio.dev/mcp` | AI agent platform with LinkedIn SDK integration |
-| **make** | `npx @makehq/mcp-server` | Make (formerly Integromat) workflow automation |
-| **taskade** | `npx @taskade/mcp-server` | Taskade project management |
-| **shadcn** | `npx shadcn mcp` | UI component system for React apps |
+| Server | Command / Connection URL | Purpose |
+| :--- | :--- | :--- |
+| **composio** | `https://connect.composio.dev/mcp` | Agent tool platform featuring custom LinkedIn SDK app integrations[cite: 6] |
+| **make** | `npx @makehq/mcp-server` | Make integration scenarios and multi-app workflow automation[cite: 6] |
+| **taskade** | `npx @taskade/mcp-server` | Taskade unified collaborative project management sync[cite: 6] |
+| **shadcn** | `npx shadcn mcp` | UI presentation layer component scaffolding system[cite: 6] |
+| **time** | `uvx mcp-server-time --local-timezone=...` | Timezone-aware context management (Australia/Melbourne)[cite: 6] |
+| **adeu** | `adeu-server.exe` | Local machine binary level utility execution[cite: 6] |
+| **keboola** | `https://mcp.keboola.com/mcp` | Keboola cloud data platform environment management[cite: 6] |
+| **zernio** | `https://mcp.zernio.com/mcp` | Zernio internal system task automation[cite: 6] |
+| **postiz** | `https://api.postiz.com/mcp/{key}` | Distributed multi-platform social media scheduling[cite: 6] |
+| **indeed** | `https://mcp.indeed.com/claude/mcp` | Live candidate posting and target job board search[cite: 6] |
+| **theirstack** | `https://api.theirstack.com/mcp` | TheirStack market signal and recruitment lead identification[cite: 6] |
 
-### Utility MCP
-
-| Server | Command | Purpose |
-|--------|---------|---------|
-| **time** | `uvx mcp-server-time --local-timezone=Australia/Melbourne` | Timezone-aware date/time |
-| **adeu** | `adeu-server.exe` | Local system utility (binary) |
-
-### Remote / SaaS MCP
-
-| Server | URL | Purpose |
-|--------|-----|---------|
-| **keboola** | `https://mcp.keboola.com/mcp` | Keboola data platform |
-| **zernio** | `https://mcp.zernio.com/mcp` | Zernio automation |
-| **postiz** | `https://api.postiz.com/mcp/{key}` | Social media scheduling |
-| **indeed** | `https://mcp.indeed.com/claude/mcp` | Indeed job search |
-| **theirstack** | `https://api.theirstack.com/mcp` | TheirStack candidate search |
-
-### Claude Plugin MCP (Available but not in active configs)
-
-| Server | URL | Purpose |
-|--------|-----|---------|
-| **asana** | `https://mcp.asana.com/sse` | Asana project management |
-| **linear** | `https://mcp.linear.app/mcp` | Linear issue tracking |
-| **gitlab** | `https://gitlab.com/api/v4/mcp` | GitLab repository management |
-| **terraform** | `hashicorp/terraform-mcp-server` | Terraform Cloud MCP |
-| **firebase** | `npx firebase-tools mcp` | Firebase project management |
-| **greptile** | `https://api.greptile.com/mcp` | AI code understanding |
+### Extended Plugin Registries (Available / Non-Active Status)
+* **asana:** `https://mcp.asana.com/sse` (Asana workspace task management)[cite: 6]
+* **linear:** `https://mcp.linear.app/mcp` (Linear agile software tracking)[cite: 6]
+* **gitlab:** `https://gitlab.com/api/v4/mcp` (GitLab alternative repository control)[cite: 6]
+* **terraform:** `hashicorp/terraform-mcp-server` (Terraform Cloud IaC management)[cite: 6]
+* **firebase:** `npx firebase-tools mcp` (Firebase application server management)[cite: 6]
+* **greptile:** `https://api.greptile.com/mcp` (AI code graph understanding engine)[cite: 6]
 
 ---
 
-## 3. AI Agents (Inside VS Code)
+## 4. AI Agents (Inside VS Code Workspaces)
 
-Five specialised agents collaborate within the VS Code workspace, orchestrated by the **Agent Orchestrator**.
+Five highly specialized agent roles act collaboratively inside the workspace environment under the direction of the core **Agent Orchestrator**[cite: 6].
 
-### Agent Orchestrator
+### Agent Orchestrator Core Capabilities
+* **Task Decomposition:** Breaks abstract business requests into decoupled tasks[cite: 6].
+* **Delegation Framework:** Directly dispatches workloads to assigned specialist profiles[cite: 6].
+* **Context Preservation:** Coordinates shared token states and execution memory limits[cite: 6].
+* **Event Brokerage:** Drives communication across agents using an active internal messaging loop[cite: 6].
 
-- **Task decomposition** — Breaks high-level goals into agent-assignable tasks
-- **Delegation** — Routes tasks to the appropriate specialist agent
-- **Context management** — Maintains shared context window across agents
-- **Conflict resolution** — Mediates agent disagreements (e.g., architect vs. engineer on tech choice)
-- **Event-driven messaging** — Agents communicate via shared context / message bus
+### Specialized Agent Tool & Responsibility Matrices
 
-### 3.1 Business Analyst Agent
+#### Business Analyst Agent
+* **Responsibilities:** requirement gathering, translation of features to explicit Gherkin / BDD assertions, workflow constraint definitions[cite: 6].
+* **Outputs:** User stories, system data flows, BDD file specs, clear acceptance parameters[cite: 6].
 
-| Aspect | Detail |
-|--------|--------|
-| **Responsibilities** | Elicit/refine requirements, write acceptance criteria (Gherkin), define data requirements & business rules, map data flow & transformation logic |
-| **Tools** | VS Code, Markdown, BDD frameworks |
-| **Outputs** | User stories, acceptance criteria, data requirements, flow diagrams |
+#### Architect Agent
+* **Responsibilities:** System pattern blueprints, tech stack alignment, validation of structural compliance rules, schema boundary definitions[cite: 6].
+* **Outputs:** Architecture Decision Records (ADRs), data contracts, interface schemas, blueprint specs[cite: 6].
 
-### 3.2 Architect Agent
+#### Scrum Master Agent
+* **Responsibilities:** Automated agile sprint mapping, bottleneck resolution, task metadata extraction, and JIRA board tracking[cite: 6].
+* **Outputs:** Task break-outs, execution velocity indexes, capacity summaries[cite: 6].
 
-| Aspect | Detail |
-|--------|--------|
-| **Responsibilities** | Design system architecture, select tech stack & patterns, define data contracts & schemas, ensure scalability & compliance |
-| **Tools** | Draw.io, ADRs, C4 model, MCP endpoints for knowledge base |
-| **Outputs** | Architecture Decision Records (ADRs), data contracts, schema definitions, stack recommendations |
+#### Data Engineer Agent
+* **Responsibilities:** Data pipeline programming, analytical transformation definitions, orchestration configs, infrastructure code design[cite: 6].
+* **Outputs:** Native pipeline code, dbt models, Airflow DAG files, declarative Terraform scripts[cite: 6].
 
-### 3.3 Scrum Master Agent
-
-| Aspect | Detail |
-|--------|--------|
-| **Responsibilities** | Break work into sprint tasks, track progress & dependencies, sync with Azure DevOps / JIRA boards, manage capacity & velocity |
-| **Tools** | JIRA API, sprint metrics, MCP for board sync |
-| **Outputs** | Sprint tasks, velocity metrics, dependency maps, retrospective data |
-
-### 3.4 Data Engineer Agent
-
-| Aspect | Detail |
-|--------|--------|
-| **Responsibilities** | Build & optimise data pipelines, implement data quality checks, manage data catalog & lineage, deploy infra with IaC |
-| **Tools** | dbt, Airflow, Spark, SQL, Terraform, MCP for Fabric & source systems |
-| **Outputs** | Pipeline code & config, IaC modules, data quality suites, lineage metadata |
-
-### 3.5 QA Engineer Agent
-
-| Aspect | Detail |
-|--------|--------|
-| **Responsibilities** | Validate data quality & accuracy, run Great Expectations tests, verify acceptance criteria, generate test reports & dashboards |
-| **Tools** | Great Expectations, Soda, pytest, CI integration, MCP for Fabric QA |
-| **Outputs** | Quality test suites, test reports, dashboards, regression suites |
-
----
-
-## 4. AI Agents (Outside VS Code — CI/CD & Operations)
-
-### 4.1 Azure DevOps CI/CD Security Agent
-
-Runs as part of the PR pipeline in Azure DevOps. Automated analysis stages:
-
-| Stage | What It Checks |
-|-------|----------------|
-| **SAST** | Static code analysis for vulnerabilities |
-| **Dependency Scan** | CVEs, license compliance in packages |
-| **IaC Security** | Terraform / ARM / Bicep misconfigurations |
-| **Data Security Scan** | Data access patterns, PII exposure |
-| **Compliance Check** | GDPR, SOC2, HIPAA, organisational policies |
-| **AI Code Review** | Best practices, anti-patterns, architecture conformance |
-
-- Results posted as PR comments
-- Auto-approve / Request changes / Block outcomes
-- Merge gate: all checks must pass before merge
-
-### 4.2 PR Code Review Agent
-
-- Triggered by Azure DevOps PR hook
-- Analyses diff against code standards MCP
-- Checks data contract adherence
-- Validates test coverage
-- Reviews IaC changes for drift
-- Posts structured review as PR comments
+#### QA Engineer Agent
+* **Responsibilities:** Quality metric profiling, assertion checking, compliance auditing, integration script verification[cite: 6].
+* **Outputs:** Great Expectations test configurations, run validations, issue dashboards, regression scripts[cite: 6].
 
 ---
 
 ## 5. CI/CD & DevOps Pipeline
 
-### Git Repository — Single Source of Truth
+The integration pipeline acts as an automated gateway validating everything from basic structural correctness to specialized security compliance postures[cite: 6].
 
-```
-main → develop → feature/*
-```
+[ Git Repo ] ──(Triggers)──> [ Build Lint/Unit ] ──> [ Test Int/QA ] ──> [ Deploy IaC ] ──> [ Promote ]
+▲
+│ (Scans PR)
+┌──────────────────────────┐
+│ Azure DevOps Sec Agent   │
+│ SAST - Dep Scan - IaC Sec│
+│ Data Sec - Compliance - AI│
+└──────────────────────────┘
 
-**Repository contents:**
-- Specs & user stories
-- Pipeline code & configs
-- Data contracts & schemas
-- Quality test suites
-- IaC (Terraform, ARM, Bicep)
-- Estimates & velocity data
 
-### CI/CD Pipeline Stages
+### End-to-End Pipeline Stages
 
-| Stage | Actions |
-|-------|---------|
-| **Build** | Compile, lint, type-check, unit tests |
-| **Test** | Integration tests, data quality checks, Great Expectations |
-| **Deploy** | IaC apply, pipeline deployment, schema migration |
-| **Promote** | Dev → Staging → Production with approval gates |
+1. **Git Repo (Source of Truth):** Code commits coming out of the VS Code Workspace trigger the runner sequence[cite: 6]. Handles tracking for all specs, code, contracts, IaC files, and sprint metrics[cite: 6].
+2. **Build Lint / Unit:** Compilation checks, syntax lints, type checks, and isolated unit test validations[cite: 6].
+3. **Test Int / QA:** Execution of multi-layered integration steps and automated data quality checks[cite: 6]. This phase is actively inspected by the **Azure DevOps Security Agent** via automated PR hooks[cite: 6].
+4. **Deploy IaC / Schema:** Applies verified Terraform/Bicep infrastructure and triggers target database schema upgrades[cite: 6].
+5. **Promote Dev ──> Prod:** Safely routes functional build states across environments through structured verification gates[cite: 6].
 
-### AI-Driven Retrospective & Continuous Improvement
-
-- Velocity trends & quality metrics
-- Bottleneck detection
-- Process improvement suggestions
-- Agent fine-tuning feedback (feeds back to Agent Orchestrator)
-
----
-
-## 6. Scrum Dashboard (Bidirectional Sync)
-
-The Scrum dashboard syncs user stories bidirectionally between the Git repository and Azure DevOps / JIRA.
-
-### Sync Direction
-
-| From | To | Data |
-|------|----|------|
-| **Repo → DevOps/JIRA** | Spec revisions → user stories, code changes → task estimates |
-| **DevOps/JIRA → Repo** | Sprint progress → velocity metrics, task assignments → agent context, board status → spec revisions, retro data → process improvements |
-
-### Sync Mechanism
-
-- **Event-driven** (webhooks) + **Scheduled** sync
-- **Conflict resolution**: Repo wins on specs, JIRA wins on status
-
-### Sprint Board Lifecycle (AI-Managed)
-
-```
-Backlog (AI priority score)
-  → Sprint Backlog (velocity tracking)
-    → In Progress (with AI ETA)
-      → Review / QA (PR tracking)
-        → Done
-```
+### Azure DevOps Security Agent Audit Layers
+During the PR testing phase, the security agent inspects the code across six distinct vectors:
+* **SAST:** Evaluates the codebase to identify hidden structural security flaws[cite: 6].
+* **Dependency Scan:** Validates packages against open CVE databases to ensure licensing compliance[cite: 6].
+* **IaC Security:** Scans Terraform configurations to catch deployment infrastructure risks[cite: 6].
+* **Data Security Scan:** Reviews query structures to prevent PII exposure and bad access patterns[cite: 6].
+* **Compliance Check:** Validates pipeline paths against GDPR, SOC2, HIPAA, and internal policies[cite: 6].
+* **AI Code Review:** Evaluates code alignment against established enterprise engineering standards[cite: 6].
 
 ---
 
-## 7. Data Engineering Pipeline — Medallion Architecture
+## 6. Data Engineering Medallion Pipeline
 
-### Bronze — Raw Data Ingestion
+Data flows sequentially through a 3-tier Medallion architecture, movin ### Bronze — Raw Ingestion
+* **Supported Source Streams:** Relational SQL DBs, Application APIs, unstructured Files, Raw Lakes, Event Streams, and PDFs.
+* **Operational Goal:** Land raw, unmodified upstream data histories directly into storage layers[cite: 6].
 
-| Source Type | Examples |
-|-------------|----------|
-| **Databases** | SQL Server, Oracle, PostgreSQL |
-| **APIs & Streams** | REST, Kafka, Event Hubs |
-| **Files** | PDF, CSV, JSON, Avro, Parquet |
-| **Data Lakes** | ADLS Gen2, S3 |
+### Silver — Transformation
+* **Processing Frameworks:** Managed dbt configurations, Apache Spark compute, Apache Airflow scheduling, Great Expectations (QE)/Soda data validations, and Azure Data Factory (ADF) pipeline tasks[cite: 6].
+* **Core Operations:** Executes schema definition mapping, field normalization filtering, cleansing, and metadata enrichment stages.
 
-### Silver — Transformation & Processing
-
-| Tool | Purpose |
-|------|---------|
-| **dbt** | SQL transformations |
-| **Spark** | Large-scale processing |
-| **Airflow / Dagster / Prefect** | Orchestration |
-| **Azure Data Factory** | Cloud orchestration |
-| **Great Expectations / Soda** | Data quality |
-
-### Gold — Curated Data & Storage
-
-| Store | Purpose |
-|-------|---------|
-| **Synapse / Snowflake / Redshift** | Analytical datastores |
-| **Delta Lake / Iceberg** | Lakehouse storage |
-| **Feast / Tecton** | Feature store |
-| **Alation / Collibra / Purview** | Data catalog |
-
-### Cross-Cutting AI Platform
-
-| Component | Tools |
-|-----------|-------|
-| **Pipeline Orchestrator** | Airflow, Dagster, Prefect, ADF |
-| **Data Quality & Testing** | Great Expectations, Soda, dbt tests |
-| **Data Lineage** | OpenLineage, Marquez, Atlan |
-| **Schema Registry & Contracts** | Avro, Protobuf, Data Contracts |
-| **Observability & Monitoring** | Monte Carlo, Sifflet, cost tracking |
+### Gold — Curated Data
+* **Data Storage Subsystems:** Azure Synapse data warehouses, open Delta Lake layers, Feast feature storage, unified enterprise catalogs, and Graph Databases[cite: 6].
+* **Core Operations:** Aggregates multi-source information into business entities, analytical data products, optimized feature spaces, and graph topologies.
 
 ---
 
-## 8. Copilot & AI Platform Convergence
+## 7. AI Platform Convergence Stack
 
-Dual-path convergence into the Azure OpenAI / Copilot stack:
-
-### Unstructured Knowledge Path (Workflow 1)
-
-```
-SharePoint PDFs & Docs
-  → PDF/Doc Extraction Agent (Azure Doc Intelligence)
-    → Bronze: Raw files & extracted content
-      → Silver: Semantic Chunking Agent + Knowledge Classification Agent
-        → Gold: Metadata Enrichment Agent → Embeddings + Enriched Metadata
-          → Azure AI Search (vector index + hybrid search)
-```
-
-### Structured Business Data Path (Workflow 2)
-
-```
-CRM, ERP & Operational Systems
-  → Bronze: Raw data (CDC)
-    → Silver: Cleansed & transformed
-      → Gold: Curated business entities + entity relationship mapping
-        → Graph Database (GraphQL)
-```
-
-### Convergence Stack
-
-| Layer | Components |
-|-------|------------|
-| **LLM Models** | Azure OpenAI GPT-4o, GPT-4-turbo, text-embedding-ada |
-| **AI Gateway** | Rate limiting, authentication, logging, cost tracking |
-| **Microsoft Foundry AI** | Orchestration, prompt management, monitoring, safety |
-| **Microsoft 365 Copilot** | Natural language interface, context-aware answers, actions |
-| **Users** | Ask questions grounded in org data |
-
----
-
-## 9. Skills Framework
-
-The project uses a **skill-routing agent framework** where an orchestrator agent dispatches to specialised `SKILL.md` files based on user intent.
-
-| Skill | Purpose |
-|-------|---------|
-| `build-profile` | Build/refresh `profile.yaml` from source resume DOCX |
-| `search-jobs` | Search portals, score jobs, write JD HTML, wish-list YAML |
-| `write-resume` | Tailor resume + cover letter, render PDFs, track submissions |
-| `interview-prep` | Research + YAML + interactive HTML dashboard + PDF/DOCX reports |
-| `create-dashboard` | Create interactive HTML dashboard from text/PDF/Word |
-| `make-infographic` | HTML → PNG infographics for LinkedIn and decks |
-| `linkedin-daily-posts` | Daily paired Posts + Articles |
-| `write-linkedin-comments` | Scheduled feed engagement |
-| `create-linkedin-comments` | Interactive composio-driven LinkedIn commenting |
-
----
-
-## 10. Observability & Cross-Cutting Concerns
-
-| Concern | Implementation |
-|---------|----------------|
-| **Observability & Monitoring** | Pipeline health, data freshness, volume anomalies |
-| **Cost Tracking & Optimization** | Pipeline compute, storage, AI agent API costs |
-| **ChatOps** | Slack / Teams — sprint updates, PR summaries, quality alerts |
-| **Incident Management** | PagerDuty / Opsgenie — pipeline failures, data quality incidents |
-
----
-
-## 11. Data Consumers
-
-| Consumer | Interface |
-|----------|-----------|
-| **Power BI / Tableau / Looker** | BI dashboards and reports |
-| **APIs & Data Products** | REST / GraphQL endpoints, data mesh |
-| **ML Models & Reports** | MLflow, automated reporting, regulatory |
-| **Data Sharing & Collaboration** | Data marketplace, cross-team catalogs |
-| **Azure OpenAI / Copilot** | Natural language Q&A over org data |
-
----
-
-## 12. Technology Stack Summary
-
-### AI Models
-
-| Provider | Models |
-|----------|--------|
-| **OpenAI** | GPT-4o, GPT-4-turbo, o1, o3, text-embedding-ada |
-| **Anthropic** | Claude Opus 4, Sonnet 4, Haiku 4 |
-| **DeepSeek** | R1, V3, V4 |
-| **Google** | Gemini 2.5 Pro, 2.5 Flash |
-| **Meta** | Llama 4, Llama 3 |
-| **Mistral** | Large, Mixtral |
-
-### Agent Frameworks
-
-| Framework | Purpose |
-|-----------|---------|
-| **LangChain / LangGraph** | LLM application framework |
-| **CrewAI / AutoGen** | Multi-agent orchestration |
-| **Claude Agent SDK** | Anthropic agent development |
-| **OpenAI Agents SDK** | OpenAI agent development |
-| **Azure AI Foundry Agents** | Microsoft agent framework |
-| **Amazon Bedrock Agents** | AWS agent framework |
-| **Databricks Mosaic Agent Framework** | Databricks agent orchestration |
-| **Hermes Agent** | Scheduled AI agent runner |
-
-### Infrastructure & IaC
-
-| Tool | Purpose |
-|------|---------|
-| **Terraform** | Infrastructure as Code |
-| **Docker** | Containerisation |
-| **Kubernetes** | Container orchestration |
-| **Azure DevOps** | CI/CD pipelines and boards |
-| **n8n** | Workflow automation |
-
-### Data Tools
-
-| Category | Tools |
-|----------|-------|
-| **Orchestration** | Airflow, Dagster, Prefect, ADF |
-| **Transformations** | dbt, Spark |
-| **Quality** | Great Expectations, Soda |
-| **Lineage** | OpenLineage, Marquez, Atlan |
-| **Catalog** | Alation, Collibra, Purview |
-| **Storage** | ADLS Gen2, S3, Delta Lake, Iceberg |
-| **Compute** | Synapse, Snowflake, Redshift, Databricks |
-| **Streaming** | Kafka, Event Hubs |
-
----
-
-## Reference Diagrams
-
-| File | Content |
-|------|---------|
-| `docs/diagrams/1 ai-driven-data-engineering.drawio` | End-to-end 5-layer architecture |
-| `docs/diagrams/2 ai-agent-workspace-detail.drawio` | AI agent workspace with 5 agents |
-| `docs/diagrams/3 devops-integration-detail.drawio` | DevOps/JIRA PR security + sync flow |
-| `docs/diagrams/4 data-pipeline-detail.drawio` | Medallion pipeline with bronze/silver/gold |
-| `docs/diagrams/5 copilot-solution-architecture.drawio` | Copilot convergence (knowledge + business data paths) |
+At the base of the processing flow, the pipeline feeds into two parallel data pathways that converge into a unified enterprise AI environment.
