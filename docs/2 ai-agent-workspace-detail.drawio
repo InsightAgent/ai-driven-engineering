@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0" version="24.7.4">
+  <diagram id="agent-detail" name="AI Agent Workspace Detail">
+    <mxGraphModel dx="0" dy="0" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="AI Agent Workspace — Detailed Architecture" style="text;html=1;align=center;verticalAlign=middle;fontSize=20;fontStyle=1;fillColor=none;strokeColor=none;fontFamily=Inter;" parent="1" vertex="1">
+          <mxGeometry x="300" y="10" width="600" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="Orchestration Layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f3ff;strokeColor=#7c3aed;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=13;fontFamily=Inter;arcSize=10;" parent="1" vertex="1">
+          <mxGeometry x="20" y="60" width="1160" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="<span style='vertical-align:middle'><b>Requirements Intake</b><br/><span style='font-size:9px;color:#666'>User stories, feature requests, acceptance criteria</span></span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7c3aed;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="85" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="<span style='vertical-align:middle'><b>Data Source Catalog</b><br/><span style='font-size:9px;color:#666'>Available databases, APIs, streams, data lake paths</span></span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7c3aed;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="220" y="85" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="<img src='data:image/svg+xml;base64,PHN2ZyBpZD0iZjQ3MGUxMTItZjFkOC00YzE4LWEzODEtOWI1NGUxMWE5Y2EzIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImIxOThmOWFkLTIyNGUtNGYzNy05OWJiLWYxYzVhMjBkMzkxNiIgeDE9IjkiIHkxPSIwLjM2IiB4Mj0iOSIgeTI9IjE4LjMxIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwLjE4IiBzdG9wLWNvbG9yPSIjNWVhMGVmIiAvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAwNzhkNCIgLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48dGl0bGU+SWNvbi13ZWItNDQ8L3RpdGxlPjxwYXRoIGQ9Ik0xOCwxMS4zMmE0LjEyLDQuMTIsMCwwLDAtMy41MS00LDUuMTUsNS4xNSwwLDAsMC01LjI1LTUsNS4yNSw1LjI1LDAsMCwwLTUsMy40OUE0Ljg2LDQuODYsMCwwLDAsMCwxMC41OWE1LDUsMCwwLDAsNS4wNyw0LjgybC40NCwwaDguMjFhLjc4Ljc4LDAsMCwwLC4yMiwwQTQuMTMsNC4xMywwLDAsMCwxOCwxMS4zMloiIGZpbGw9InVybCgjYjE5OGY5YWQtMjI0ZS00ZjM3LTk5YmItZjFjNWEyMGQzOTE2KSIgLz48cGF0aCBkPSJNMTIuMzMsNi41OWEzLjA3LDMuMDcsMCwwLDAtNS42MS44NSwzLjE2LDMuMTYsMCwwLDAsLjMzLDIuMjdMNC43MSwxMi4wOGEuNzkuNzksMCwwLDAsMCwxLjEyLjc4Ljc4LDAsMCwwLC41Ni4yMy43Ni43NiwwLDAsMCwuNTYtLjIzbDIuMzMtMi4zNmEzLjE0LDMuMTQsMCwwLDAsLjgxLjMzLDMuMDgsMy4wOCwwLDAsMCwzLjM2LTQuNThabS0uNTQsMi4xQTIuMTYsMi4xNiwwLDAsMSw5LjcsMTAuMzRhMS43OSwxLjc5LDAsMCwxLS41MS0uMDcsMS44NywxLjg3LDAsMCwxLS43LS4zMiwyLjEzLDIuMTMsMCwwLDEtLjU2LS41NiwyLjE3LDIuMTcsMCwwLDEtLjMxLTEuNzNBMi4xNCwyLjE0LDAsMCwxLDkuNyw2YTIuMzEsMi4zMSwwLDAsMSwuNTIuMDYsMi4xOCwyLjE4LDAsMCwxLDEuMzIsMUEyLjEzLDIuMTMsMCwwLDEsMTEuNzksOC42OVoiIGZpbGw9IiNmMmYyZjIiIC8+PGVsbGlwc2UgY3g9IjkuNjkiIGN5PSI4LjE4IiByeD0iMi4xNSIgcnk9IjIuMTYiIGZpbGw9IiM4M2I5ZjkiIC8+PC9zdmc+' width='20' height='20' style='vertical-align:middle;margin-right:6px'/><span style='vertical-align:middle'><b>Agent Orchestrator</b><br/><span style='font-size:9px;color:#666'>Task decomposition - Delegation - Context management - Conflict resolution</span></span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7c3aed;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="420" y="85" width="280" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="<img src='data:image/svg+xml;base64,PHN2ZyBpZD0idXVpZC1hZGJkYWU4ZS01YTQxLTQ2ZDEtOGMxOC1hYTczY2RiZmVlMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjE4IiBoZWlnaHQ9IjE4IiB2aWV3Qm94PSIwIDAgMTggMTgiPjxkZWZzPjxyYWRpYWxHcmFkaWVudCBpZD0idXVpZC0yYTc0MDdhYS1iNzg3LTQ4ZGQtYTk2YS0wZDgxYWI2ZTkzYmIiIGN4PSItNjcuOTgxIiBjeT0iNzkzLjE5OSIgcj0iLjQ1IiBncmFkaWVudFRyYW5zZm9ybT0idHJhbnNsYXRlKC0xNzkzOS4wMyAyMDM2OC4wMjkpIHJvdGF0ZSg0NSkgc2NhbGUoMjUuMDkxIC0zNC4xNDkpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjODNiOWY5IiAvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAwNzhkNCIgLz48L3JhZGlhbEdyYWRpZW50PjwvZGVmcz48cGF0aCBkPSJtMCwyLjd2MTIuNmMwLDEuNDkxLDEuMjA5LDIuNywyLjcsMi43aDEyLjZjMS40OTEsMCwyLjctMS4yMDksMi43LTIuN1YyLjdjMC0xLjQ5MS0xLjIwOS0yLjctMi43LTIuN0gyLjdDMS4yMDksMCwwLDEuMjA5LDAsMi43Wk0xMC44LDB2My42YzAsMy45NzYsMy4yMjQsNy4yLDcuMiw3LjJoLTMuNmMtMy45NzYsMC03LjE5OSwzLjIyMi03LjIsNy4xOTh2LTMuNTk4YzAtMy45NzYtMy4yMjQtNy4yLTcuMi03LjJoMy42YzMuOTc2LDAsNy4yLTMuMjI0LDcuMi03LjJaIiBmaWxsPSJ1cmwoI3V1aWQtMmE3NDA3YWEtYjc4Ny00OGRkLWE5NmEtMGQ4MWFiNmU5M2JiKSIgc3Ryb2tlLXdpZHRoPSIwIiAvPjwvc3ZnPg==' width='20' height='20' style='vertical-align:middle;margin-right:6px'/><span style='vertical-align:middle'><b>Knowledge Base (RAG)</b><br/><span style='font-size:9px;color:#666'>Past ADRs, company standards, data models, security policies</span></span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7c3aed;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="740" y="85" width="200" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="<span style='vertical-align:middle'><b>Vector Store</b><br/><span style='font-size:9px;color:#666'>Azure AI Search / Pinecone</span></span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffbeb;strokeColor=#d97706;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="960" y="85" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="<span style='vertical-align:middle'><b>Human-in-Loop Gates</b></span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef2f2;strokeColor=#e11d48;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;" parent="1" vertex="1">
+          <mxGeometry x="960" y="135" width="120" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="20" value="AI Agents — Roles &amp; Responsibilities" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9fafb;strokeColor=#6b7280;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=13;fontFamily=Inter;arcSize=10;" parent="1" vertex="1">
+          <mxGeometry x="20" y="220" width="1160" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="21" value="<span style='vertical-align:middle'><b>Business Analyst Agent</b></span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7c3aed;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="255" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="22" value="<span style='vertical-align:middle'>Elicit &amp; refine user requirements<br/>Write acceptance criteria (Gherkin)<br/>Define data requirements & business rules<br/>Map data flow & transformation logic</span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f3ff;strokeColor=#7c3aed;strokeWidth=1;fontSize=9;fontFamily=Inter;arcSize=8;" parent="1" vertex="1">
+          <mxGeometry x="40" y="289" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="23" value="<span style='vertical-align:middle'><b>Tools:</b> VS Code, Markdown, BDD</span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffbeb;strokeColor=#d97706;strokeWidth=1;fontSize=8;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="373" width="210" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="24" value="<span style='vertical-align:middle'><b>Architect Agent</b></span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7c3aed;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="270" y="255" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="25" value="<span style='vertical-align:middle'>Design system architecture<br/>Select technology stack &amp; patterns<br/>Define data contracts & schemas<br/>Ensure scalability & compliance</span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f3ff;strokeColor=#7c3aed;strokeWidth=1;fontSize=9;fontFamily=Inter;arcSize=8;" parent="1" vertex="1">
+          <mxGeometry x="270" y="289" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="26" value="<span style='vertical-align:middle'><b>Tools:</b> Draw.io, ADRs, C4 model</span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffbeb;strokeColor=#d97706;strokeWidth=1;fontSize=8;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="270" y="373" width="210" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="27" value="<span style='vertical-align:middle'><b>Scrum Master Agent</b></span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7c3aed;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="500" y="255" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="28" value="<span style='vertical-align:middle'>Break work into sprint tasks<br/>Track progress & dependencies<br/>Sync with DevOps/JIRA boards<br/>Manage capacity & velocity</span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f3ff;strokeColor=#7c3aed;strokeWidth=1;fontSize=9;fontFamily=Inter;arcSize=8;" parent="1" vertex="1">
+          <mxGeometry x="500" y="289" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="29" value="<span style='vertical-align:middle'><b>Tools:</b> JIRA API, Sprint metrics</span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffbeb;strokeColor=#d97706;strokeWidth=1;fontSize=8;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="500" y="373" width="210" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="30" value="<span style='vertical-align:middle'><b>Data Engineer Agent</b></span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#059669;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="730" y="255" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="31" value="<span style='vertical-align:middle'>Build & optimize data pipelines<br/>Implement data quality checks<br/>Manage data catalog & lineage<br/>Deploy infra with IaC (Terraform)</span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#059669;strokeWidth=1;fontSize=9;fontFamily=Inter;arcSize=8;" parent="1" vertex="1">
+          <mxGeometry x="730" y="289" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="32" value="<span style='vertical-align:middle'><b>Tools:</b> dbt, Airflow, Spark, SQL</span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffbeb;strokeColor=#d97706;strokeWidth=1;fontSize=8;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="730" y="373" width="210" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="33" value="<span style='vertical-align:middle'><b>QA Engineer Agent</b></span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#059669;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="960" y="255" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="34" value="<span style='vertical-align:middle'>Validate data quality & accuracy<br/>Run Great Expectations tests<br/>Verify acceptance criteria met<br/>Generate test reports & dashboards</span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#059669;strokeWidth=1;fontSize=9;fontFamily=Inter;arcSize=8;" parent="1" vertex="1">
+          <mxGeometry x="960" y="289" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="35" value="<span style='vertical-align:middle'><b>Tools:</b> GX, Soda, pytest, CI</span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffbeb;strokeColor=#d97706;strokeWidth=1;fontSize=8;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="960" y="373" width="210" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="36" value="<span style='vertical-align:middle'><b>Inter-Agent Communication Bus</b><br/><span style='font-size:9px;color:#666'>Shared context window / event-driven messaging</span></span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eef2ff;strokeColor=#4f46e5;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="415" width="1130" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="37" value="Agent Quality Metrics" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9fafb;strokeColor=#6b7280;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=13;fontFamily=Inter;arcSize=10;" parent="1" vertex="1">
+          <mxGeometry x="40" y="465" width="1130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="38" value="<span style='vertical-align:middle'><b>Accuracy</b></span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#059669;strokeWidth=1;fontSize=9;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="55" y="480" width="130" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="39" value="<span style='vertical-align:middle'><b>Latency</b></span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffbeb;strokeColor=#d97706;strokeWidth=1;fontSize=9;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="200" y="480" width="130" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="40" value="<span style='vertical-align:middle'><b>Token Usage</b></span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffbeb;strokeColor=#d97706;strokeWidth=1;fontSize=9;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="345" y="480" width="130" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="41" value="<span style='vertical-align:middle'><b>Task Success Rate</b></span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#059669;strokeWidth=1;fontSize=9;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="490" y="480" width="130" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="42" value="<span style='vertical-align:middle'><b>Human Approval %</b></span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#059669;strokeWidth=1;fontSize=9;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="635" y="480" width="130" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="43" value="<span style='vertical-align:middle'><b>Cost per Task</b></span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef2f2;strokeColor=#e11d48;strokeWidth=1;fontSize=9;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="780" y="480" width="130" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="50" value="Outputs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#059669;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=13;fontFamily=Inter;arcSize=10;" parent="1" vertex="1">
+          <mxGeometry x="20" y="620" width="1160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="51" value="<img src='data:image/svg+xml;base64,PHN2ZyBpZD0iZjc4ZjUxMTUtYmU4OC00ZDQ0LWIzNGUtM2Y2ZWE3NDMxMjVjIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImI2YzQzYmQ5LWUzN2YtNDE5MS05M2MyLWQzYTdhODRjNTA1ZSIgeDE9IjkiIHkxPSIxOS4xMyIgeDI9IjkiIHkyPSItMC4yOSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwNzhkNCIgLz48c3RvcCBvZmZzZXQ9IjAuMTYiIHN0b3AtY29sb3I9IiMxMzgwZGEiIC8+PHN0b3Agb2Zmc2V0PSIwLjUzIiBzdG9wLWNvbG9yPSIjM2M5MWU1IiAvPjxzdG9wIG9mZnNldD0iMC44MiIgc3RvcC1jb2xvcj0iIzU1OWNlYyIgLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM1ZWEwZWYiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHRpdGxlPkljb24tbWFjaGluZWxlYXJuaW5nLTE2MjwvdGl0bGU+PHBhdGggZD0iTTE4LDExLjM4QTQsNCwwLDAsMCwxNC40OSw3LjUsNS4xLDUuMSwwLDAsMCw5LjI0LDIuNjIsNS4yNSw1LjI1LDAsMCwwLDQuMjIsNiw0LjgsNC44LDAsMCwwLDAsMTAuNjdhNC45LDQuOSwwLDAsMCw1LjA3LDQuNzFsLjQ0LDBoOC4yMWEuNzguNzgsMCwwLDAsLjIyLDBBNC4xLDQuMSwwLDAsMCwxOCwxMS4zOFoiIGZpbGw9InVybCgjYjZjNDNiZDktZTM3Zi00MTkxLTkzYzItZDNhN2E4NGM1MDVlKSIgLz48cGF0aCBkPSJNNS40MiwxMC4zOUg0LjU0YTEuMDksMS4wOSwwLDEsMCwwLC40OWguODhhLjIuMiwwLDAsMSwuMi4ydjQuM2guNDl2LTQuM0EuNjkuNjksMCwwLDAsNS40MiwxMC4zOVptLTEuOTUuODhhLjY0LjY0LDAsMSwxLC42NC0uNjRBLjY0LjY0LDAsMCwxLDMuNDcsMTEuMjdaIiBmaWxsPSIjOWNlYmZmIiAvPjxwYXRoIGQ9Ik04Ljk0LDEwLjYxdi0xYS43LjcsMCwwLDAtLjctLjdINi42OWEuMi4yLDAsMCwxLS4yLS4yVjMuNGwtLjIzLjEyTDYsMy42NnY1YS42OS42OSwwLDAsMCwuNjkuNjlIOC4yNGEuMjEuMjEsMCwwLDEsLjIxLjIxdjFhMS4wOCwxLjA4LDAsMCwwLS44NSwxLjA2LDEuMDksMS4wOSwwLDEsMCwxLjM0LTEuMDZabS0uMjUsMS43aDBhLjY0LjY0LDAsMSwxLC42NC0uNjRBLjY0LjY0LDAsMCwxLDguNjksMTIuMzFaIiBmaWxsPSIjZjJmMmYyIiAvPjxwYXRoIGQ9Ik0xNC41Myw4LjVhMS4wOSwxLjA5LDAsMCwwLS4yNSwyLjE1di4yYS4yMS4yMSwwLDAsMS0uMjEuMjFoLTJWNy41NGEuNjkuNjksMCwwLDAtLjY5LS42OUgxMC4zNUExLjA4LDEuMDgsMCwwLDAsOS4yOSw2YTEuMDksMS4wOSwwLDEsMCwxLjA2LDEuMzRoMS4wN2EuMi4yLDAsMCwxLC4yLjJ2Ny44NGguNDlWMTEuNTVoMmEuNy43LDAsMCwwLC43LS43di0uMmExLjA5LDEuMDksMCwwLDAsLjg1LTEuMDZoMEExLjA5LDEuMDksMCwwLDAsMTQuNTMsOC41Wk05LjI5LDcuNzNoMGEuNjQuNjQsMCwxLDEsLjY0LS42NEEuNjQuNjQsMCwwLDEsOS4yOSw3LjczWm01LjI0LDIuNWgwYS42NC42NCwwLDEsMSwuNjMtLjY0QS42NC42NCwwLDAsMSwxNC41MywxMC4yM1oiIGZpbGw9IiM5Y2ViZmYiIC8+PC9zdmc+' width='20' height='20' style='vertical-align:middle;margin-right:6px'/><span style='vertical-align:middle'><b>AI Spec Engine — Generated Artifacts</b></span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eef2ff;strokeColor=#4f46e5;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="650" width="1120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="52" value="<span style='vertical-align:middle'><b>Architecture Decision Records (ADRs)</b></span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#059669;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="690" width="170" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="53" value="<span style='vertical-align:middle'><b>Data Contracts & Schemas</b></span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#059669;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="225" y="690" width="170" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="54" value="<span style='vertical-align:middle'><b>Pipeline Code & Config</b></span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#059669;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="410" y="690" width="170" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="55" value="<span style='vertical-align:middle'><b>Quality Test Suites</b></span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#059669;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="595" y="690" width="170" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="56" value="<span style='vertical-align:middle'><b>Documentation & Lineage</b></span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#059669;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="780" y="690" width="170" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="57" value="<span style='vertical-align:middle'><b>Sprint Tasks & Estimates</b></span>" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#059669;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="965" y="690" width="195" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="61" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;fontSize=10;strokeColor=#0078d4;strokeWidth=2;endArrow=classic;endFill=1;curved=0;" parent="1" source="11" target="13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="62" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;fontSize=10;strokeColor=#0078d4;strokeWidth=2;endArrow=classic;endFill=1;curved=0;" parent="1" source="12" target="13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="63" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;fontSize=10;strokeColor=#0078d4;strokeWidth=2;endArrow=classic;endFill=1;curved=0;" parent="1" source="13" target="14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="64" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;fontSize=10;strokeColor=#0078d4;strokeWidth=2;endArrow=classic;endFill=1;curved=0;" parent="1" source="14" target="15" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="65" value="Delegate tasks" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fontSize=9;strokeColor=#0078d4;strokeWidth=2;endArrow=classic;endFill=1;curved=0;" parent="1" source="13" target="20" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="66" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fontSize=10;strokeColor=#0078d4;strokeWidth=2;endArrow=classic;endFill=1;curved=0;" parent="1" source="20" target="36" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="67" value="Produce artifacts" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fontSize=9;strokeColor=#0078d4;strokeWidth=2;endArrow=classic;endFill=1;curved=0;" parent="1" source="36" target="51" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="68" value="Oversight & approvals" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0;exitY=1;entryX=1;entryY=0.5;fontSize=9;strokeColor=#0078d4;strokeWidth=2;endArrow=classic;endFill=1;curved=0;dashed=1;" parent="1" source="16" target="13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+
