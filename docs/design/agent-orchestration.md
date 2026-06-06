@@ -1,42 +1,55 @@
 # Agent Orchestration & Collaborative Workspace
 
-## 1. The Collaborative Cockpit (VS Code)
-The development environment serves as the primary interaction point where human engineers and the AI agent cluster operate in a tight feedback loop.
+**Status:** `Draft` | **Version:** `1.0.0` | **Domain:** `Intelligence Layer`
 
-### AI Coding Assistants (In-IDE)
-These tools provide the immediate interface for intent capture and code generation:
-* **GitHub Copilot (Agent Mode):** Inline completions and semi-autonomous script generation.
-* **Claude Code:** Terminal-based agent for structural refactoring and local execution.
-* **Cursor AI & Cline:** Background agents for autonomous workspace modifications.
-* **OpenCode & Codex CLI:** Natural language interpreters and task routing.
+## 1. The "Human-in-the-Loop" IDE Cockpit
+The platform transforms the IDE (VS Code) from a text editor into a **Collaborative Execution Cockpit**. The human engineer transitions from a "coder" to an "orchestrator," managing a swarm of specialized AI agents.
 
-## 2. Agent Orchestration Framework
-
-### The Orchestrator Core
-The **Agent Orchestrator** acts as the brain of the swarm, managing the following critical functions:
-* **Task Decomposition:** Breaking abstract business requests into decoupled, actionable tasks.
-* **Delegation:** Routing workloads to the most appropriate specialized agent profile.
-* **Context Preservation:** Managing shared token states and execution memory limits.
-* **Event Brokerage:** Facilitating inter-agent communication via internal messaging loops.
-
-### Specialized Agent Role Matrix
-
-| Agent Role | Primary Responsibilities | Key Outputs |
-| :--- | :--- | :--- |
-| **Business Analyst** | Requirement gathering, BDD/Gherkin translation, constraint definition | User Stories, BDD Specs, Acceptance Criteria |
-| **Architect** | System blueprints, tech stack alignment, schema boundary definition | ADRs, Data Contracts, Interface Schemas |
-| **Scrum Master** | Agile sprint mapping, bottleneck resolution, JIRA synchronization | Task Break-outs, Velocity Indexes, Capacity Reports |
-| **Data Engineer** | Pipeline programming, transformation logic, IaC design | dbt Models, Airflow DAGs, Terraform Scripts |
-| **QA Engineer** | Quality profiling, compliance auditing, integration verification | Great Expectations Configs, Validation Reports |
-
-## 3. Architecture Workflow Hierarchy
-1. **Input:** User intent is captured by **AI Coding Assistants**.
-2. **Routing:** Requests are parsed by the **Agent Orchestrator**.
-3. **Execution:** Tasks are delegated to **Specialized Agents**.
-4. **Action:** Agents interact with systems via **MCP** or push code to **CI/CD**.
+### 1.1 Interface Tier: The Gateway to Intent
+User intents are captured via three primary channels, depending on the task granularity:
+* **Inline Flow (GitHub Copilot):** For atomic changes, immediate completions, and localized refactoring.
+* **Agentic Flow (Claude Code / Cline):** For multi-file structural changes and autonomous task execution.
+* **Command Flow (OpenCode / Codex CLI):** For system-level operations, tool routing, and natural language terminal control.
 
 ---
-**Related Documents:**
-- [Solution Design](./solution-design.md)
-- [MCP Catalog](./mcp-catalog.md)
-- [Engineering Operations](./engineering-operations.md)
+
+## 2. Swarm Architecture & Orchestration
+
+### 2.1 The Orchestrator Engine
+The **Agent Orchestrator** is the central nervous system. It prevents "context drift" by acting as the single source of truth for task state.
+
+**Core Operational Logic:**
+1. **Decomposition:** Large goals (e.g., "Build a Salesforce to Fabric pipeline") are split into a directed acyclic graph (DAG) of sub-tasks.
+2. **Dynamic Delegation:** Tasks are routed based on the **Responsibility Matrix**.
+3. **Memory Synchronization:** The orchestrator ensures that a decision made by the *Architect Agent* is immediately injected into the *Data Engineer Agent's* context.
+4. **Verification Loop:** Before any "Outbound Action" (Commit/Deploy), a verification request is sent to the *QA Agent*.
+
+### 2.2 Specialized Agent Responsibility Matrix
+
+| Role | Archetype | Core Responsibility | Primary Output | Critical Tooling |
+| :--- | :--- | :--- | :--- | :--- |
+| **Business Analyst** | `Translator` | Convert business ambiguity $\rightarrow$ technical precision | Gherkin Specs, BDD Assertions | Confluence MCP, JIRA MCP |
+| **Architect** | `Governor` | Define structural boundaries & technical compliance | ADRs, Data Contracts, Schema | Schema MCP, Architecture Templates |
+| **Scrum Master** | `Synchronizer` | Manage delivery velocity & backlog health | Sprint Maps, Task Break-outs | JIRA Sync, Velocity Metrics |
+| **Data Engineer** | `Implementer` | Translate design $\rightarrow$ executable code | Spark SQL, dbt, Terraform | Fabric API, Git MCP, SQL MCP |
+| **QA Engineer** | `Validator` | Verify correctness & performance compliance | Great Expectations, Validation Reports | Soda Core, Data Profilers |
+
+---
+
+## 3. The Operational Flow (End-to-End)
+
+### 3.1 The Implementation Cycle
+The interaction follows a recursive a-synchronous loop:
+
+`User Intent` $\rightarrow$ `Orchestrator` $\rightarrow$ `Specialist Agent (Analysis/Design)` $\rightarrow$ `MCP Query` $\rightarrow$ `Proposal` $\rightarrow$ `Human Approval` $\rightarrow$ `Specialist Agent (Code)` $\rightarrow$ `Git Commit`
+
+### 3.2 Context Management Strategy
+To avoid token exhaustion and "forgetting," the orchestrator implements:
+* **Surgical Context Injection:** Only providing the agent with the specific files and MCP-fetched schemas needed for the current sub-task.
+* **Persistent Memory Graph:** Using a graph-based memory system to track cross-agent dependencies.
+
+---
+**Navigation:**
+- 🏛️ **Back to Blueprint:** [Solution Design](./01-solution-design.md)
+- 🔌 **Connectivity Details:** [MCP Catalog](./mcp-catalog.md)
+- ⚙️ **Delivery Pipeline:** [Engineering Operations](./engineering-operations.md)

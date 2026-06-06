@@ -1,64 +1,65 @@
 # Engineering Operations & Data Pipeline
 
-## 1. CI/CD & DevOps Pipeline
-The integration pipeline is the automated gateway that ensures all AI-generated and human-authored code meets enterprise quality and security standards.
+**Status:** `Draft` | **Version:** `1.0.0` | **Domain:** `Delivery Layer`
 
-### Pipeline Stages
-1. **Source of Truth (Git):** All specs, code, and IaC files are committed to the repo, triggering the runner.
-2. **Build & Unit Validation:** Compilation checks, syntax linting, type checks, and isolated unit tests.
-3. **Integration & QA:** Multi-layered integration testing and automated data quality checks.
-4. **Infrastructure Deployment (IaC):** Verified Terraform/Bicep application and schema upgrades.
-5. **Environment Promotion:** Structured routing from Development ──> QA ──> Production.
+## 1. The Autonomous CI/CD Pipeline
+The delivery pipeline is not just a deployment script; it is a **Governed Gateway**. It ensures that AI-generated code is structurally sound and security-compliant before it ever touches a production environment.
 
-### Azure DevOps Security Agent Audit
-During the PR phase, the security agent scans the codebase across six vectors:
-* **SAST:** Structural security flaw detection.
-* **Dependency Scan:** CVE database validation and license compliance.
-* **IaC Security:** Terraform configuration risk analysis.
-* **Data Security:** PII exposure and access pattern reviews.
-* **Compliance:** Validation against GDPR, SOC2, and HIPAA.
-* **AI Code Review:** Alignment with enterprise engineering standards.
+### 1.1 Pipeline Topology
+`[ Git Repo ]` $\rightarrow$ `[ Build/Lint/Unit ]` $\rightarrow$ `[ Integration/QA ]` $\rightarrow$ `[ IaC Deployment ]` $\rightarrow$ `[ Global Promotion ]`
 
-## 2. Data Engineering Medallion Pipeline
-Data is processed through a 3-tier architectural pattern to ensure quality and traceability.
-
-### Bronze (Raw Ingestion)
-* **Goal:** Land unmodified upstream data histories.
-* **Sources:** Relational DBs, APIs, Files, Event Streams, and PDFs.
-
-### Silver (Transformation)
-* **Goal:** Cleanse, normalize, and enrich data.
-* **Frameworks:** dbt, Apache Spark, Apache Airflow, Great Expectations/Soda, and ADF.
-
-### Gold (Curated Data)
-* **Goal:** Aggregate into business-ready analytical products.
-* **Subsystems:** Azure Synapse, Delta Lake, Feast Feature Store, and Graph Databases.
-
-## 3. Technical Tool & Library Inventory
-
-### AI Agent Frameworks
-* **Orchestration:** LangGraph, CrewAI, AutoGen, Semantic Kernel.
-* **Processing:** LlamaIndex Workflows, LCEL.
-* **Schedules:** Hermes Agent.
-
-### Agent Toolkit Libraries
-* **Integration:** Composio, Toolhouse.
-* **Interaction:** Browser Use, LangChain Tools.
-
-### Data Engineering Core
-* **Orchestration:** Airflow, Dagster, Prefect, ADF.
-* **Transformation:** dbt, Apache Spark.
-* **Quality:** Great Expectations, Soda Core.
-* **AI-First Tools:** Sling, SQLGlot, DuckDB, Evidence.
-
-### Infrastructure & Ops
-* **IaC:** Terraform.
-* **Runtimes:** Docker, Kubernetes.
-* **Config:** Ansible.
-* **C-Ops:** Azure DevOps, GitHub Actions.
+### 1.2 The Security Agent Audit (PR Gate)
+Every pull request is intercepted by the **Azure DevOps Security Agent**, which performs a six-dimensional audit:
+* **SAST (Static Analysis):** Identifying structural security flaws and logic vulnerabilities.
+* **SCA (Software Composition Analysis):** Scanning dependencies against Open CVE databases.
+* **IaC Validation:** Vetting Terraform/Bicep for "over-privileged" resources or insecure networking.
+* **Data Privacy Scan:** Detecting potential PII leakage or improper access patterns in SQL.
+* **Compliance Guardrails:** Validating paths against GDPR, SOC2, and HIPAA.
+* **AI Quality Review:** Ensuring code adheres to the enterprise "Clean Code" standard.
 
 ---
-**Related Documents:**
-- [Solution Design](./solution-design.md)
-- [Agent Orchestration](./agent-orchestration.md)
-- [MCP Catalog](./mcp-catalog.md)
+
+## 2. Data Architecture: The Medallion Framework
+The platform implements a sequenced transformation pipeline to move data from raw chaos to curated business intelligence.
+
+### 2.1 Bronze Layer (Raw Ingestion)
+* **Objective:** Absolute fidelity. Data is landed in its original form.
+* **Sources:** Relational DBs, Event Streams, PDFs, and Legacy APIs.
+* **Standard:** Append-only, immutable history.
+
+### 2.2 Silver Layer (Curated Transformation)
+* **Objective:** Trust and Consistency.
+* **Engineering Stack:** `Sling` $\rightarrow$ `dbt` $\rightarrow$ `Apache Spark` $\rightarrow$ `Great Expectations`.
+* **Operations:** Schema normalization, cleansing, and metadata enrichment.
+
+### 2.3 Gold Layer (Analytical Products)
+* **Objective:** High-performance business consumption.
+* **Storage:** Azure Synapse, Delta Lake, and Graph Databases.
+* **Output:** Optimized feature sets for AI models and Power BI Direct Lake tables.
+
+---
+
+## 3. Technical Ecosystem Inventory
+
+### 🤖 AI Agent Frameworks
+* **Core Orchestration:** LangGraph (Cyclic/Stateful), CrewAI (Role-based), AutoGen (Conversational).
+* **Enterprise SDKs:** Semantic Kernel (Microsoft), LlamaIndex Workflows.
+* **Task Scheduling:** Hermes Agent.
+
+### 🛠️ Engineering Toolkit
+* **Orchestration:** Airflow, Dagster, Azure Data Factory (ADF).
+* **Transformation:** dbt, Spark SQL, SQLGlot (Multi-dialect translation).
+* **Quality:** Great Expectations, Soda Core.
+* **Local Analytics:** DuckDB, MotherDuck, Evidence.md.
+
+### ⚙️ Infrastructure & Ops
+* **IaC:** Terraform, Bicep.
+* **Runtime:** Docker, Kubernetes.
+* **Provisioning:** Ansible.
+* **CI/CD:** GitHub Actions, Azure DevOps.
+
+---
+**Navigation:**
+- 🏛️ **Back to Blueprint:** [Solution Design](./01-solution-design.md)
+- 🤖 **Agent Logic:** [Agent Orchestration](./agent-orchestration.md)
+- 🔌 **Connector Map:** [MCP Catalog](./mcp-catalog.md)
