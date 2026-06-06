@@ -1,0 +1,78 @@
+  <diagram id="copilot-solution-architecture" name="Copilot Solution Architecture">
+    <mxGraphModel dx="0" dy="0" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="960" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="Copilot Solution Architecture — AI-Powered Knowledge &amp;amp; Business Data" style="text;html=1;align=center;verticalAlign=middle;fontSize=19;fontStyle=1;fillColor=none;strokeColor=none;fontFamily=Inter;" parent="1" vertex="1">
+          <mxGeometry x="20" y="10" width="920" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="&lt;b&gt;Workflow 1: Unstructured Knowledge Path&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;Organization documents &amp;amp; policies&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f6fc;strokeColor=#0078d4;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=13;fontFamily=Inter;arcSize=10;" parent="1" vertex="1">
+          <mxGeometry x="20" y="60" width="440" height="620" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="&lt;b&gt;SharePoint PDFs &amp;amp; Docs&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Unstructured organizational content&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0078d4;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="35" y="90" width="410" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="&lt;b&gt;PDF/Doc Extraction Agent&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Extracts text, tables, images from documents&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffbeb;strokeColor=#d97706;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="35" y="160" width="410" height="38" as="geometry" />
+        </mxCell>
+ 
+        <mxCell id="7" value="&lt;b&gt;Bronze — Raw Files &amp;amp; Extracted Content&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;PDFs, DOCX, parsed text, extracted tables&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7c3aed;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="43" y="235" width="394" height="38" as="geometry" />
+        </mxCell>
+ 
+        <mxCell id="9" value="&lt;b&gt;Semantic Chunking Agent&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Splits documents into meaningful segments&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffbeb;strokeColor=#d97706;strokeWidth=1;fontSize=9;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="305" width="380" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="&lt;b&gt;Knowledge Classification Agent&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Classifies chunks by domain, topic, content type&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffbeb;strokeColor=#d97706;strokeWidth=1;fontSize=9;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="350" width="380" height="38" as="geometry" />
+        </mxCell>
+ 
+        <mxCell id="12" value="&lt;b&gt;Metadata Enrichment Agent&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Adds author, date, department, tags, relationships&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffbeb;strokeColor=#d97706;strokeWidth=1;fontSize=9;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="440" width="380" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="&lt;b&gt;Gold — Embeddings + Enriched Metadata&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7c3aed;strokeWidth=1;fontSize=9;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="483" width="380" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="&lt;b&gt;Azure AI Search&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Vector index + hybrid search over enriched content&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0078d4;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="35" y="570" width="410" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="&lt;b&gt;Workflow 2: Structured Business Data Path&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;CRM, ERP &amp;amp; operational systems&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#059669;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=13;fontFamily=Inter;arcSize=10;" parent="1" vertex="1">
+          <mxGeometry x="480" y="60" width="460" height="620" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="&lt;b&gt;Source Systems&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;CRM, ERP, HRIS, Finance&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#059669;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="495" y="90" width="430" height="48" as="geometry" />
+        </mxCell>
+ 
+        <mxCell id="18" value="&lt;b&gt;Bronze — Raw Data&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Source extracts, change data capture&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#059669;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="503" y="175" width="414" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="&lt;b&gt;Silver — Cleansed &amp;amp; Transformed&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Data quality, dedup, type mapping&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#059669;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="503" y="225" width="414" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="20" value="&lt;b&gt;Gold — Curated Business Entities&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Customers, products, orders&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#059669;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="503" y="275" width="414" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="21" value="&lt;b&gt;Gold — Entity Relationship Mapping&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Relationships between entities&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#059669;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="503" y="325" width="414" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="22" value="&lt;b&gt;Graph Database (GraphQL)&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Entity-relationship graph with query layer&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#059669;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="495" y="420" width="430" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="23" value="&lt;b&gt;Azure OpenAI LLM Models&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;GPT-4o · GPT-4-turbo · text-embedding-ada&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffbeb;strokeColor=#d97706;strokeWidth=1;fontSize=12;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="150" y="710" width="440" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="24" value="&lt;b&gt;AI Gateway&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Rate limiting · Authentication · Logging · Cost tracking&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef2f2;strokeColor=#e11d48;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="150" y="795" width="440" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="25" value="&lt;b&gt;Microsoft Foundry AI&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Orchestration · Prompt management · Monitoring · Safety&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef2f2;strokeColor=#e11d48;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="150" y="875" width="440" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="26" value="&lt;b&gt;Microsoft 365 Copilot&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Natural language interface · Context-aware answers · Actions&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f3ff;strokeColor=#7c3aed;strokeWidth=1;fontSize=12;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="150" y="955" width="440" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="27" value="&lt;b&gt;Users&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Ask questions grounded in org data&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f6fc;strokeColor=#0078d4;strokeWidth=1;fontSize=12;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="250" y="1040" width="240" height="45" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>

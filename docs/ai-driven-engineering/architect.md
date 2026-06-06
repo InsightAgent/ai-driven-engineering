@@ -4,7 +4,7 @@
 
 This document catalogs every component in the AI-driven data engineering architecture. The system is a **collaborative multi-agent engineering platform** where AI agents work alongside humans inside VS Code, orchestrated through CI/CD, connected to enterprise source systems via MCP, and governed by security review gates.
 
-See the accompanying draw.io diagrams in `docs/` for visual reference:
+See the accompanying draw.io diagrams in `docs/diagrams/` for visual reference:
 - `1 ai-driven-data-engineering.drawio` — End-to-end architecture (5 layers)
 - `2 ai-agent-workspace-detail.drawio` — AI agent workspace internals
 - `3 devops-integration-detail.drawio` — DevOps / JIRA integration
@@ -38,46 +38,109 @@ VS Code is the **primary IDE** and serves as the collaborative workspace where A
 
 ---
 
-## 2. Model Context Protocol (MCP) Endpoints
+## 2. Model Context Protocol (MCP) Servers
 
-MCP provides a **standardised interface** for AI agents to interact with tools and data sources.
+MCP provides a **standardised interface** for AI agents to interact with tools and data sources. The following 38 MCP servers are configured across the development environment (Cursor, OpenCode, Cline).
 
-### Engineering Knowledge & Standards MCP
+### Azure & Microsoft Cloud MCP
 
-| Endpoint | Purpose |
-|----------|---------|
-| **Engineering Knowledge Base** | RAG over past ADRs, architecture decisions, data models, security policies, company standards |
-| **Code Standards** | Linting rules, style guides, best-practice checkers, anti-pattern detection |
-| **Engineering Framework** | Project templates, pipeline scaffolds, IaC modules, CI/CD templates, data contract schemas |
+| Server | Command / URL | Purpose |
+|--------|---------------|---------|
+| **azure-mcp** | `npx @azure/mcp server start` | Azure Resource Manager, Fabric, AI services (env: `AZURE_FABRIC_ENABLED=true`) |
+| **fabric** | `npx @microsoft/fabric-mcp server start --mode all` | Microsoft Fabric — Lakehouses, Notebooks, Pipelines, Semantic Models |
+| **fabric-api** | `npx @einlogic/mcp-fabric-api` | Fabric REST API integration |
+| **microsoft365** | `npx @pnp/cli-microsoft365-mcp-server` | Microsoft 365 admin — users, groups, SharePoint, Teams |
+| **confluence** | `npx mcp-remote https://mcp.atlassian.com/v1/mcp/authv2` | Atlassian Confluence knowledge base access |
 
-### Source Systems MCP
+### Database & Storage MCP
 
-| Endpoint | Purpose |
-|----------|---------|
-| **Dynamic CRM** | Schema exploration, entity relationship discovery, data profiling, sample queries |
-| **SAP** | Table exploration, data profiling, extraction pattern discovery |
-| **SQL Server / Oracle / PostgreSQL** | Database introspection, query execution, schema comparison |
-| **Kafka / Event Hubs** | Topic discovery, schema registry interaction, sample message inspection |
+| Server | Command / URL | Purpose |
+|--------|---------------|---------|
+| **postgres** | `npx @modelcontextprotocol/server-postgres` | PostgreSQL database (localhost:5432) |
+| **sqlite** | `uvx mcp-server-sqlite --db-path ...` | Local SQLite database (`.n8n/database.sqlite`) |
+| **mongodb** | `npx mongodb-mcp-server --readOnly` | MongoDB (10.26.0.6:27017, read-only) |
+| **filesystem** | `npx @modelcontextprotocol/server-filesystem` | Local file access (`C:\projects`, `Documents`, `Desktop`) |
 
-### Microsoft Fabric MCP
+### Search & Web Research MCP
 
-| Endpoint | Purpose |
-|----------|---------|
-| **Fabric Notebooks** | Publish and execute Spark / Python notebooks |
-| **Fabric Data Pipelines** | Deploy and trigger pipeline runs |
-| **Fabric Semantic Models** | Query and publish Power BI datasets |
-| **Fabric Lakehouse** | Read/write Delta tables, explore lakehouse structure |
-| **Fabric Dataflows Gen2** | Deploy and monitor dataflows |
-| **Fabric QA** | Validate data quality rules, run expectation suites, publish test results |
+| Server | Command / URL | Purpose |
+|--------|---------------|---------|
+| **tavily-search** | `npx tavily-mcp` | AI-powered web search (requires API key) |
+| **brave-search** | `npx @modelcontextprotocol/server-brave-search` | Brave search engine (requires API key) |
+| **fetch** | `uvx mcp-server-fetch` | URL fetching and content extraction |
+| **everything-search** | `uvx mcp-server-everything-search` | Universal desktop search |
 
-### Other MCP Endpoints Referenced
+### Browser Automation MCP
 
-| Endpoint | Purpose |
-|----------|---------|
-| `WebFetch` / `tavily-search` / `brave-search` | Web research |
-| `user-playwright` | PDF generation, browser automation |
-| `user-docconvert` | DOCX conversion from HTML |
-| `composio` | LinkedIn SDK integration |
+| Server | Command | Purpose |
+|--------|---------|---------|
+| **playwright** | `npx @playwright/mcp` | Browser automation — navigation, screenshots, PDF generation |
+| **puppeteer** | `npx @modelcontextprotocol/server-puppeteer` | Headless Chrome automation |
+
+### Development & CI/CD MCP
+
+| Server | Command / URL | Purpose |
+|--------|---------------|---------|
+| **github** | `npx @modelcontextprotocol/server-github` | GitHub API — repos, PRs, issues (requires PAT) |
+| **git** | `uvx mcp-server-git` | Git repository operations |
+| **docker** | `npx docker-mcp-server` | Docker container and image management |
+| **n8n** | `npx n8n-mcp` | Workflow automation (localhost:5678, Webhook security) |
+
+### Knowledge & Memory MCP
+
+| Server | Command / URL | Purpose |
+|--------|---------------|---------|
+| **memory** | `npx @modelcontextprotocol/server-memory` | Persistent agent memory (`memory.json`) |
+| **supermemory** | `https://mcp.supermemory.ai/mcp` | AI-powered memory and knowledge storage |
+| **context7** | `npx @upstash/context7-mcp` | Web context and content analysis |
+| **sequential-thinking** | `npx @modelcontextprotocol/server-sequential-thinking` | Chain-of-thought reasoning |
+
+### Document Processing MCP
+
+| Server | Command | Purpose |
+|--------|---------|---------|
+| **docconvert** | Python script (`pdf2odt_mcp_server.py`) | PDF to ODT document conversion |
+| **docling** | `uvx --from=docling-mcp docling-mcp-server` | Document parsing and analysis |
+| **markitdown** | `npx markitdown-mcp-npx` | Document format conversion |
+| **pdf2docx** | `npx @youhaozhao/pdf2docx-mcp` | PDF to DOCX conversion |
+| **md-pdf** | `npx md-pdf-mcp` | Markdown to PDF conversion |
+
+### Productivity & Automation MCP
+
+| Server | Command / URL | Purpose |
+|--------|---------------|---------|
+| **composio** | `npx mcp-remote https://connect.composio.dev/mcp` | AI agent platform with LinkedIn SDK integration |
+| **make** | `npx @makehq/mcp-server` | Make (formerly Integromat) workflow automation |
+| **taskade** | `npx @taskade/mcp-server` | Taskade project management |
+| **shadcn** | `npx shadcn mcp` | UI component system for React apps |
+
+### Utility MCP
+
+| Server | Command | Purpose |
+|--------|---------|---------|
+| **time** | `uvx mcp-server-time --local-timezone=Australia/Melbourne` | Timezone-aware date/time |
+| **adeu** | `adeu-server.exe` | Local system utility (binary) |
+
+### Remote / SaaS MCP
+
+| Server | URL | Purpose |
+|--------|-----|---------|
+| **keboola** | `https://mcp.keboola.com/mcp` | Keboola data platform |
+| **zernio** | `https://mcp.zernio.com/mcp` | Zernio automation |
+| **postiz** | `https://api.postiz.com/mcp/{key}` | Social media scheduling |
+| **indeed** | `https://mcp.indeed.com/claude/mcp` | Indeed job search |
+| **theirstack** | `https://api.theirstack.com/mcp` | TheirStack candidate search |
+
+### Claude Plugin MCP (Available but not in active configs)
+
+| Server | URL | Purpose |
+|--------|-----|---------|
+| **asana** | `https://mcp.asana.com/sse` | Asana project management |
+| **linear** | `https://mcp.linear.app/mcp` | Linear issue tracking |
+| **gitlab** | `https://gitlab.com/api/v4/mcp` | GitLab repository management |
+| **terraform** | `hashicorp/terraform-mcp-server` | Terraform Cloud MCP |
+| **firebase** | `npx firebase-tools mcp` | Firebase project management |
+| **greptile** | `https://api.greptile.com/mcp` | AI code understanding |
 
 ---
 
@@ -402,8 +465,8 @@ The project uses a **skill-routing agent framework** where an orchestrator agent
 
 | File | Content |
 |------|---------|
-| `docs/1 ai-driven-data-engineering.drawio` | End-to-end 5-layer architecture |
-| `docs/2 ai-agent-workspace-detail.drawio` | AI agent workspace with 5 agents |
-| `docs/3 devops-integration-detail.drawio` | DevOps/JIRA PR security + sync flow |
-| `docs/4 data-pipeline-detail.drawio` | Medallion pipeline with bronze/silver/gold |
-| `docs/5 copilot-solution-architecture.drawio` | Copilot convergence (knowledge + business data paths) |
+| `docs/diagrams/1 ai-driven-data-engineering.drawio` | End-to-end 5-layer architecture |
+| `docs/diagrams/2 ai-agent-workspace-detail.drawio` | AI agent workspace with 5 agents |
+| `docs/diagrams/3 devops-integration-detail.drawio` | DevOps/JIRA PR security + sync flow |
+| `docs/diagrams/4 data-pipeline-detail.drawio` | Medallion pipeline with bronze/silver/gold |
+| `docs/diagrams/5 copilot-solution-architecture.drawio` | Copilot convergence (knowledge + business data paths) |

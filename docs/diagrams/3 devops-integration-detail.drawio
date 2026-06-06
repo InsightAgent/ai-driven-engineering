@@ -1,0 +1,62 @@
+  <diagram id="devops-/-jira-integration-detail" name="DevOps / JIRA Integration Detail">
+    <mxGraphModel dx="0" dy="0" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="480" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="DevOps / JIRA Integration — Detailed Architecture" style="text;html=1;align=center;verticalAlign=middle;fontSize=19;fontStyle=1;fillColor=none;strokeColor=none;fontFamily=Inter;" parent="1" vertex="1">
+          <mxGeometry x="20" y="10" width="1160" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="&lt;b&gt;Git Repository&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;Single Source of Truth&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f6fc;strokeColor=#0078d4;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=13;fontFamily=Inter;arcSize=10;" parent="1" vertex="1">
+          <mxGeometry x="20" y="60" width="320" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="Specs &amp;amp; User Stories" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0078d4;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="35" y="100" width="290" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="Pipeline Code &amp;amp; Configs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0078d4;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="35" y="155" width="290" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="Data Contracts &amp;amp; Schemas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0078d4;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="35" y="210" width="290" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="Quality Test Suites" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0078d4;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="35" y="265" width="290" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="IaC (Terraform, etc.)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0078d4;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="35" y="320" width="290" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="Estimates &amp;amp; Velocity Data" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0078d4;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="35" y="375" width="290" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="&lt;b&gt;PR &amp;amp; AI Security Review Flow&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef2f2;strokeColor=#e11d48;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=13;fontFamily=Inter;arcSize=10;" parent="1" vertex="1">
+          <mxGeometry x="380" y="60" width="400" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="&lt;b&gt;SAST&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Static code analysis&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e11d48;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="395" y="100" width="370" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="&lt;b&gt;Dependency Scan&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;CVEs, license compliance&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e11d48;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="395" y="155" width="370" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="&lt;b&gt;IaC Security&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Terraform/ARM misconfigurations&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e11d48;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="395" y="210" width="370" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="&lt;b&gt;Data Security Scan&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;PII exposure, access patterns&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e11d48;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="395" y="265" width="370" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="&lt;b&gt;Compliance Check&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;GDPR, SOC2, HIPAA&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e11d48;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="395" y="320" width="370" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="&lt;b&gt;AI Code Review&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Best practices, anti-patterns&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e11d48;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="395" y="375" width="370" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="&lt;b&gt;Bidirectional Sync Platform&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#059669;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=13;fontFamily=Inter;arcSize=10;" parent="1" vertex="1">
+          <mxGeometry x="820" y="60" width="360" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="18" value="&lt;b&gt;Repo → DevOps/JIRA&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Spec revisions → user stories&lt;br/&gt;Code changes → task estimates&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#059669;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="835" y="100" width="330" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="&lt;b&gt;DevOps/JIRA → Repo&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Sprint progress → velocity metrics&lt;br/&gt;Task assignments → agent context&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#059669;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="835" y="180" width="330" height="65" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
