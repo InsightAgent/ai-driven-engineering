@@ -4,12 +4,6 @@
 
 This document catalogs every component in the AI-driven data engineering architecture. The system is a **collaborative multi-agent engineering platform** where AI agents work alongside humans inside VS Code, orchestrated through CI/CD, connected to enterprise source systems via MCP, and governed by security review gates.
 
-See the accompanying draw.io diagrams in `docs/diagrams/` for visual reference:
-- `1 ai-driven-data-engineering.drawio` — End-to-end architecture (5 layers)
-- `2 ai-agent-workspace-detail.drawio` — AI agent workspace internals
-- `3 devops-integration-detail.drawio` — DevOps / JIRA integration
-- `4 data-pipeline-detail.drawio` — Medallion pipeline architecture
-- `5 copilot-solution-architecture.drawio` — Copilot convergence (unstructured + structured data)
 
 ---
 
