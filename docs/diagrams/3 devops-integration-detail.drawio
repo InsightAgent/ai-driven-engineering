@@ -1,62 +1,65 @@
-  <diagram id="devops-/-jira-integration-detail" name="DevOps / JIRA Integration Detail">
-    <mxGraphModel dx="0" dy="0" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="480" math="0" shadow="0">
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0" version="24.7.4">
+  <diagram id="3 - DevOps Integration" name="3 - DevOps Integration">
+    <mxGraphModel dx="0" dy="0" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="2" value="DevOps / JIRA Integration — Detailed Architecture" style="text;html=1;align=center;verticalAlign=middle;fontSize=19;fontStyle=1;fillColor=none;strokeColor=none;fontFamily=Inter;" parent="1" vertex="1">
-          <mxGeometry x="20" y="10" width="1160" height="35" as="geometry" />
+        <mxCell id="2" value="Azure DevOps / JIRA — AI-Driven Integration" style="text;html=1;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;fillColor=none;strokeColor=none;fontFamily=Inter;" parent="1" vertex="1">
+          <mxGeometry x="250" y="10" width="900" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="3" value="&lt;b&gt;Git Repository&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;Single Source of Truth&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f6fc;strokeColor=#0078d4;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=13;fontFamily=Inter;arcSize=10;" parent="1" vertex="1">
-          <mxGeometry x="20" y="60" width="320" height="400" as="geometry" />
+<mxCell id="300" value="&lt;b&gt;Git Repository&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;Single Source of Truth&lt;/span&gt;&lt;br&gt;&lt;span style=&#x27;font-size:9px;color:#94a3b8&#x27;&gt;Specs &amp; stories&lt;br&gt;Pipeline code &amp; config&lt;br&gt;Data contracts &amp; schemas&lt;br&gt;IaC (Terraform)&lt;br&gt;Estimates &amp; velocity data&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffbeb;strokeColor=#fcd34d;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="60" width="220" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="4" value="Specs &amp;amp; User Stories" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0078d4;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="35" y="100" width="290" height="40" as="geometry" />
+<mxCell id="301" value="&lt;b&gt;PR &amp; AI Security Review Flow&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;1. Dev creates PR  2. PR Hook triggers review&lt;/span&gt;&lt;br&gt;&lt;span style=&#x27;font-size:9px;color:#94a3b8&#x27;&gt;SAST | Dependency | IaC Security | Data Security | Compliance | AI Code Review&lt;/span&gt;&lt;br&gt;&lt;span style=&#x27;font-size:9px;color:green&#x27;&gt;Merge gate: All checks must pass&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9fafb;strokeColor=#d1d5db;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="60" width="360" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="5" value="Pipeline Code &amp;amp; Configs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0078d4;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="35" y="155" width="290" height="40" as="geometry" />
+<mxCell id="302" value="&lt;b&gt;Bidirectional Sync Platform&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;Repo → JIRA:&lt;/span&gt;&lt;br&gt;&lt;span style=&#x27;font-size:9px;color:#94a3b8&#x27;&gt;AI stories → issues&lt;br&gt;Estimates → story points&lt;br&gt;Criteria → tasks&lt;/span&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;JIRA → Repo:&lt;/span&gt;&lt;br&gt;&lt;span style=&#x27;font-size:9px;color:#94a3b8&#x27;&gt;Sprint progress → velocity&lt;br&gt;Status → spec revisions&lt;/span&gt;&lt;br&gt;&lt;span style=&#x27;font-size:8px&#x27;&gt;Sync: Event-driven + Scheduled daily&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9fafb;strokeColor=#d1d5db;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="660" y="60" width="280" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="6" value="Data Contracts &amp;amp; Schemas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0078d4;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="35" y="210" width="290" height="40" as="geometry" />
+<mxCell id="303" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#94a3b8;strokeWidth=2;endArrow=classic;endFill=1;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="7" value="Quality Test Suites" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0078d4;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="35" y="265" width="290" height="40" as="geometry" />
+<mxCell id="304" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#94a3b8;strokeWidth=2;endArrow=classic;endFill=1;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="8" value="IaC (Terraform, etc.)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0078d4;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="35" y="320" width="290" height="40" as="geometry" />
+<mxCell id="305" value="Sprint Board — AI-Managed Lifecycle" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9fafb;strokeColor=#374151;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=13;fontFamily=Inter;arcSize=10;" parent="1">
+          <mxGeometry x="20" y="220" width="1360" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="9" value="Estimates &amp;amp; Velocity Data" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0078d4;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="35" y="375" width="290" height="40" as="geometry" />
+<mxCell id="306" value="&lt;b&gt;Backlog&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;Data quality dashboard&amp;lt;br&amp;gt;Streaming ingestion&amp;lt;br&amp;gt;Schema registry&amp;lt;br&amp;gt;&amp;lt;span style=&amp;#x27;color:#7c3aed&amp;#x27;&amp;gt;42 tasks, 210 SP&amp;lt;/span&amp;gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffbeb;strokeColor=#fcd34d;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="240" width="245" height="65" as="geometry" />
         </mxCell>
-        <mxCell id="10" value="&lt;b&gt;PR &amp;amp; AI Security Review Flow&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef2f2;strokeColor=#e11d48;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=13;fontFamily=Inter;arcSize=10;" parent="1" vertex="1">
-          <mxGeometry x="380" y="60" width="400" height="400" as="geometry" />
+<mxCell id="307" value="&lt;b&gt;Sprint Backlog&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;Data quality (8 SP)&amp;lt;br&amp;gt;Kafka connector (5 SP)&amp;lt;br&amp;gt;Schema tests (3 SP)&amp;lt;br&amp;gt;&amp;lt;span style=&amp;#x27;color:#7c3aed&amp;#x27;&amp;gt;16/30 SP committed&amp;lt;/span&amp;gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#93c5fd;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="305" y="240" width="245" height="65" as="geometry" />
         </mxCell>
-        <mxCell id="11" value="&lt;b&gt;SAST&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Static code analysis&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e11d48;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="395" y="100" width="370" height="40" as="geometry" />
+<mxCell id="308" value="&lt;b&gt;In Progress&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;BA: Requirements&amp;lt;br&amp;gt;Arch: Schema design&amp;lt;br&amp;gt;DE: Pipeline&amp;lt;br&amp;gt;&amp;lt;span style=&amp;#x27;color:#e11d48&amp;#x27;&amp;gt;AI ETA: 3 days&amp;lt;/span&amp;gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffbeb;strokeColor=#fcd34d;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="570" y="240" width="245" height="65" as="geometry" />
         </mxCell>
-        <mxCell id="12" value="&lt;b&gt;Dependency Scan&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;CVEs, license compliance&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e11d48;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="395" y="155" width="370" height="40" as="geometry" />
+<mxCell id="309" value="&lt;b&gt;Review / QA&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;PR #142: Data quality&amp;lt;br&amp;gt;PR #143: Migration&amp;lt;br&amp;gt;&amp;lt;span style=&amp;#x27;color:green&amp;#x27;&amp;gt;AI: Approved&amp;lt;/span&amp;gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f3ff;strokeColor=#c4b5fd;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="835" y="240" width="245" height="65" as="geometry" />
         </mxCell>
-        <mxCell id="13" value="&lt;b&gt;IaC Security&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Terraform/ARM misconfigurations&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e11d48;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="395" y="210" width="370" height="40" as="geometry" />
+<mxCell id="310" value="&lt;b&gt;Done&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;Pipeline orchestration&amp;lt;br&amp;gt;Data catalog&amp;lt;br&amp;gt;Terraform modules&amp;lt;br&amp;gt;&amp;lt;span style=&amp;#x27;color:green&amp;#x27;&amp;gt;16 SP done&amp;lt;/span&amp;gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#86efac;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="1100" y="240" width="245" height="65" as="geometry" />
         </mxCell>
-        <mxCell id="14" value="&lt;b&gt;Data Security Scan&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;PII exposure, access patterns&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e11d48;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="395" y="265" width="370" height="40" as="geometry" />
+<mxCell id="311" value="AI-Driven Retrospective &amp; Continuous Improvement" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#1d4ed8;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=13;fontFamily=Inter;arcSize=10;" parent="1">
+          <mxGeometry x="20" y="340" width="1360" height="65" as="geometry" />
         </mxCell>
-        <mxCell id="15" value="&lt;b&gt;Compliance Check&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;GDPR, SOC2, HIPAA&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e11d48;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="395" y="320" width="370" height="40" as="geometry" />
+<mxCell id="312" value="&lt;b&gt;Velocity Trends&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#93c5fd;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="358" width="245" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="16" value="&lt;b&gt;AI Code Review&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Best practices, anti-patterns&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e11d48;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="395" y="375" width="370" height="40" as="geometry" />
+<mxCell id="313" value="&lt;b&gt;Quality Metrics&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#93c5fd;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="305" y="358" width="245" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="17" value="&lt;b&gt;Bidirectional Sync Platform&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#059669;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=13;fontFamily=Inter;arcSize=10;" parent="1" vertex="1">
-          <mxGeometry x="820" y="60" width="360" height="400" as="geometry" />
+<mxCell id="314" value="&lt;b&gt;Bottleneck Detection&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#93c5fd;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="570" y="358" width="245" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="18" value="&lt;b&gt;Repo → DevOps/JIRA&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Spec revisions → user stories&lt;br/&gt;Code changes → task estimates&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#059669;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="835" y="100" width="330" height="65" as="geometry" />
+<mxCell id="315" value="&lt;b&gt;Process Improvements&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#93c5fd;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="835" y="358" width="245" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="19" value="&lt;b&gt;DevOps/JIRA → Repo&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Sprint progress → velocity metrics&lt;br/&gt;Task assignments → agent context&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#059669;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="835" y="180" width="330" height="65" as="geometry" />
+<mxCell id="316" value="&lt;b&gt;Agent Fine-tuning&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#93c5fd;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="1100" y="358" width="245" height="35" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
+</mxfile>

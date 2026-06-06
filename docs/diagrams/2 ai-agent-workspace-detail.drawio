@@ -1,50 +1,77 @@
-  <diagram id="ai-agent-workspace-detail" name="AI Agent Workspace Detail">
-    <mxGraphModel dx="0" dy="0" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="610" math="0" shadow="0">
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0" version="24.7.4">
+  <diagram id="2 - AI Agent Workspace" name="2 - AI Agent Workspace">
+    <mxGraphModel dx="0" dy="0" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="2" value="AI Agent Workspace — Detailed Architecture" style="text;html=1;align=center;verticalAlign=middle;fontSize=19;fontStyle=1;fillColor=none;strokeColor=none;fontFamily=Inter;" parent="1" vertex="1">
-          <mxGeometry x="20" y="10" width="1160" height="35" as="geometry" />
+        <mxCell id="2" value="AI Agent Workspace — Detailed Architecture" style="text;html=1;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;fillColor=none;strokeColor=none;fontFamily=Inter;" parent="1" vertex="1">
+          <mxGeometry x="300" y="10" width="800" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="3" value="&lt;b&gt;Orchestration Layer&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f3ff;strokeColor=#7c3aed;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=13;fontFamily=Inter;arcSize=10;" parent="1" vertex="1">
-          <mxGeometry x="20" y="60" width="1160" height="130" as="geometry" />
+<mxCell id="200" value="Orchestration Layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f3ff;strokeColor=#7c3aed;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=13;fontFamily=Inter;arcSize=10;" parent="1">
+          <mxGeometry x="20" y="60" width="1360" height="95" as="geometry" />
         </mxCell>
-        <mxCell id="4" value="&lt;b&gt;Requirements Intake&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;User stories, feature requests, acceptance criteria&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7c3aed;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="40" y="85" width="160" height="60" as="geometry" />
+<mxCell id="201" value="&lt;b&gt;Requirements Intake&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;User stories · feature requests · acceptance criteria&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7c3aed;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="80" width="220" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="5" value="&lt;b&gt;Data Source Catalog&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Available databases, APIs, streams, data lake paths&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7c3aed;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="220" y="85" width="160" height="60" as="geometry" />
+<mxCell id="202" value="&lt;b&gt;Data Source Catalog&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;Available databases · APIs · streams · lake paths&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7c3aed;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="80" width="220" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="6" value="&lt;b&gt;Agent Orchestrator&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Task decomposition · Delegation · Context management&lt;br/&gt;· Conflict resolution&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7c3aed;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="420" y="85" width="280" height="85" as="geometry" />
+<mxCell id="203" value="&lt;b&gt;Agent Orchestrator&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;Task decomposition · inter-agent context · conflict resolution&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7c3aed;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="560" y="80" width="220" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="7" value="&lt;b&gt;Knowledge Base (RAG)&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Past ADRs, company standards,&lt;br/&gt;data models, security policies&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7c3aed;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="740" y="85" width="200" height="85" as="geometry" />
+<mxCell id="204" value="&lt;b&gt;Knowledge Base (RAG)&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;ADRs · company standards · security policies&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7c3aed;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="820" y="80" width="220" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="8" value="&lt;b&gt;Vector Store&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Azure AI Search&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffbeb;strokeColor=#d97706;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="960" y="85" width="120" height="40" as="geometry" />
+<mxCell id="205" value="&lt;b&gt;Human-in-Loop Gates&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;Oversight &amp;amp; approvals&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7c3aed;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="1080" y="80" width="220" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="9" value="&lt;b&gt;Human-in-Loop Gates&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef2f2;strokeColor=#e11d48;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;" parent="1" vertex="1">
-          <mxGeometry x="960" y="135" width="120" height="35" as="geometry" />
+<mxCell id="206" value="AI Agents — Roles &amp; Responsibilities" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9fafb;strokeColor=#374151;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=13;fontFamily=Inter;arcSize=10;" parent="1">
+          <mxGeometry x="20" y="175" width="1360" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="10" value="&lt;b&gt;AI Agents — Roles &amp;amp; Responsibilities&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9fafb;strokeColor=#6b7280;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=13;fontFamily=Inter;arcSize=10;" parent="1" vertex="1">
-          <mxGeometry x="20" y="220" width="1160" height="370" as="geometry" />
+<mxCell id="207" value="&lt;b&gt;Business Analyst Agent&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;Elicit requirements · Gherkin acceptance criteria · Define data requirements &amp;amp; business rules · Map data flow &amp;amp; transformation logic&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f3ff;strokeColor=#7c3aed;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="200" width="210" height="65" as="geometry" />
         </mxCell>
-        <mxCell id="11" value="&lt;b&gt;Business Analyst Agent&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Responsibilities: Elicit/refine requirements, write acceptance criteria (Gherkin), define data requirements &amp;amp; business rules, map data flow &amp;amp; transformation logic&lt;br/&gt;Tools: VS Code, Markdown, BDD&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6b7280;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="40" y="250" width="1120" height="55" as="geometry" />
+<mxCell id="208" value="&lt;b&gt;Architect Agent&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;Design system architecture · Select technology stack · Define data contracts &amp;amp; schemas · Ensure scalability &amp;amp; compliance&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f3ff;strokeColor=#7c3aed;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="260" y="200" width="210" height="65" as="geometry" />
         </mxCell>
-        <mxCell id="12" value="&lt;b&gt;Architect Agent&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Responsibilities: Design system architecture, select tech stack &amp;amp; patterns, define data contracts &amp;amp; schemas, ensure scalability &amp;amp; compliance&lt;br/&gt;Tools: Draw.io, ADRs, C4 model&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6b7280;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="40" y="315" width="1120" height="55" as="geometry" />
+<mxCell id="209" value="&lt;b&gt;Scrum Master Agent&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;Break work into sprint tasks · Track progress &amp;amp; dependencies · Sync DevOps/JIRA boards · Manage capacity &amp;amp; velocity&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f3ff;strokeColor=#7c3aed;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="480" y="200" width="210" height="65" as="geometry" />
         </mxCell>
-        <mxCell id="13" value="&lt;b&gt;Scrum Master Agent&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Responsibilities: Break work into sprint tasks, track progress &amp;amp; dependencies, sync with DevOps/JIRA boards, manage capacity &amp;amp; velocity&lt;br/&gt;Tools: JIRA API, Sprint metrics&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6b7280;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="40" y="380" width="1120" height="55" as="geometry" />
+<mxCell id="210" value="&lt;b&gt;Data Engineer Agent&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;Build &amp;amp; optimize data pipelines · Implement data quality · Manage data catalog &amp;amp; lineage · Deploy IaC (Terraform)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#059669;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="700" y="200" width="210" height="65" as="geometry" />
         </mxCell>
-        <mxCell id="14" value="&lt;b&gt;Data Engineer Agent&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Responsibilities: Build &amp;amp; optimise data pipelines, implement data quality checks, manage data catalog &amp;amp; lineage, deploy infra with IaC (Terraform)&lt;br/&gt;Tools: dbt, Airflow, Spark, SQL&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#6b7280;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="40" y="445" width="1120" height="55" as="geometry" />
+<mxCell id="211" value="&lt;b&gt;QA Engineer Agent&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;Validate data quality &amp;amp; accuracy · Run GX tests · Verify acceptance criteria · Generate test reports &amp;amp; dashboards&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#059669;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="920" y="200" width="210" height="65" as="geometry" />
         </mxCell>
-        <mxCell id="15" value="&lt;b&gt;QA Engineer Agent&lt;/b&gt;&lt;br/&gt;&lt;span style=&#x27;font-size:9px;color:#666&#x27;&gt;Responsibilities: Validate data quality &amp;amp; accuracy, run Great Expectations tests, verify acceptance criteria, generate test reports &amp;amp; dashboards&lt;br/&gt;Tools: GX, Soda, pytest, CI&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#6b7280;strokeWidth=1;fontSize=10;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
-          <mxGeometry x="40" y="510" width="1120" height="55" as="geometry" />
+<mxCell id="212" value="&lt;b&gt;Inter-Agent Communication Bus&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;Shared context window / event-driven messaging for agent collaboration&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#059669;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="1140" y="200" width="200" height="65" as="geometry" />
+        </mxCell>
+<mxCell id="213" value="&lt;b&gt;Agent Quality Metrics&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;Accuracy · Latency · Token Usage · Task Success Rate · Human Approval % · Cost per Task&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9fafb;strokeColor=#d1d5db;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="280" width="1300" height="30" as="geometry" />
+        </mxCell>
+<mxCell id="214" value="Outputs — Generated Artifacts" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#047857;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=13;fontFamily=Inter;arcSize=10;" parent="1">
+          <mxGeometry x="20" y="395" width="1360" height="65" as="geometry" />
+        </mxCell>
+<mxCell id="215" value="&lt;b&gt;ADRs&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#86efac;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="412" width="180" height="35" as="geometry" />
+        </mxCell>
+<mxCell id="216" value="&lt;b&gt;Data Contracts &amp;amp; Schemas&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#86efac;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="220" y="412" width="180" height="35" as="geometry" />
+        </mxCell>
+<mxCell id="217" value="&lt;b&gt;Pipeline Code &amp;amp; Config&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#86efac;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="440" y="412" width="180" height="35" as="geometry" />
+        </mxCell>
+<mxCell id="218" value="&lt;b&gt;Quality Test Suites&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#86efac;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="660" y="412" width="180" height="35" as="geometry" />
+        </mxCell>
+<mxCell id="219" value="&lt;b&gt;Documentation &amp;amp; Lineage&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#86efac;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="880" y="412" width="180" height="35" as="geometry" />
+        </mxCell>
+<mxCell id="220" value="&lt;b&gt;Sprint Tasks &amp;amp; Estimates&lt;/b&gt;&lt;br&gt;&lt;span style=&#x27;font-size:10px;color:#666&#x27;&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#86efac;strokeWidth=1;fontSize=11;fontFamily=Inter;arcSize=8;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="1100" y="412" width="180" height="35" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
+</mxfile>
