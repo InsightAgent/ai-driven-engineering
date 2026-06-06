@@ -1,0 +1,2 @@
+# Draw.io diagram files - binary to prevent CRLF/LF corruption
+*.drawio binary
