@@ -22,7 +22,7 @@ Extending Ecosystems with Model Context Protocol (MCP)
 
 Model Context Protocol (MCP) connectors allow your terminal-based AI agent to interface securely with cloud-synced canvas platforms and specialized local rendering engines. Rather than relying on simple text output, these servers give the AI direct visual capabilities:
 
-1.  **Eraser Model Context Protocol (MCP)** server or the Eraser Agent Skills CLI. Both solutions integrate directly with OpenCode or other AI coding assistants (like Claude Code and Cursor) to convert code strings, notes, or prompts into structured Eraser Diagrams-as-Code.
+1.  **Eraser Model Context Protocol (MCP)** server or the **Eraser Agent Skills CLI**. Both solutions integrate directly with OpenCode or other AI coding assistants (like Claude Code and Cursor) to convert code strings, notes, or prompts into structured Eraser Diagrams-as-Code.
     
 2.  **Excalidraw MCP:** The most reliable setup for interactive, editable diagrams. The agent parses your Markdown text, renders it into component nodes, and generates an interlocking canvas JSON file that you can immediately tweak in your web browser.
     
