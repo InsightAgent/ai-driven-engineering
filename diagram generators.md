@@ -22,17 +22,19 @@ Extending Ecosystems with Model Context Protocol (MCP)
 
 Model Context Protocol (MCP) connectors allow your terminal-based AI agent to interface securely with cloud-synced canvas platforms and specialized local rendering engines. Rather than relying on simple text output, these servers give the AI direct visual capabilities:
 
-1.  **Excalidraw MCP:** The most reliable setup for interactive, editable diagrams. The agent parses your Markdown text, renders it into component nodes, and generates an interlocking canvas JSON file that you can immediately tweak in your web browser.
+1.  **Eraser Model Context Protocol (MCP)** server or the Eraser Agent Skills CLI. Both solutions integrate directly with OpenCode or other AI coding assistants (like Claude Code and Cursor) to convert code strings, notes, or prompts into structured Eraser Diagrams-as-Code.
     
-2.  **AWS Diagram MCP:** Ideal for teams building cloud infrastructure. This server utilizes the Python diagrams package alongside the official, comprehensive AWS icon set to create professional infrastructure layouts directly from your text specifications.
+2.  **Excalidraw MCP:** The most reliable setup for interactive, editable diagrams. The agent parses your Markdown text, renders it into component nodes, and generates an interlocking canvas JSON file that you can immediately tweak in your web browser.
     
-3.  **Microsoft MarkItDown:** A helpful file standardization utility that pre-processes diverse local assets (such as PDFs, Word documents, or images) into clean, token-efficient Markdown that your AI agent can easily ingest before generating a diagram.
+3.  **AWS Diagram MCP:** Ideal for teams building cloud infrastructure. This server utilizes the Python diagrams package alongside the official, comprehensive AWS icon set to create professional infrastructure layouts directly from your text specifications.
     
-4.  [**veelenga/claude-mermaid**](https://github.com/veelenga/claude-mermaid): An excellent option for text-to-diagram workflows. When you feed Claude your markdown structure, it generates Mermaid.js code, opens a local live-preview browser tab, and auto-saves the diagram as an SVG or PNG in your workspace. \[[1](https://github.com/veelenga/claude-mermaid), [2](https://www.reddit.com/r/ClaudeAI/comments/1qu3lin/built_an_mcp_server_for_live_mermaid_diagrams/)\]
+4.  **Microsoft MarkItDown:** A helpful file standardization utility that pre-processes diverse local assets (such as PDFs, Word documents, or images) into clean, token-efficient Markdown that your AI agent can easily ingest before generating a diagram.
     
-5.  [**angrysky56/mcp-diagram-server**](https://github.com/angrysky56/mcp-diagram-server): This server is explicitly optimized to **map markdown text directly into mind maps** and structural flowcharts. It includes built-in indentation detection and auto-saves artifacts into a dedicated library directory. \[[1](https://github.com/angrysky56/mcp-diagram-server)\]
+5.  [**veelenga/claude-mermaid**](https://github.com/veelenga/claude-mermaid): An excellent option for text-to-diagram workflows. When you feed Claude your markdown structure, it generates Mermaid.js code, opens a local live-preview browser tab, and auto-saves the diagram as an SVG or PNG in your workspace. \[[1](https://github.com/veelenga/claude-mermaid), [2](https://www.reddit.com/r/ClaudeAI/comments/1qu3lin/built_an_mcp_server_for_live_mermaid_diagrams/)\]
     
-6.  **drawio-diagramming Plugin**: Allows Claude to parse your technical specifications and output editable .drawio XML files or structural SVGs natively embedded into your repository
+6.  [**angrysky56/mcp-diagram-server**](https://github.com/angrysky56/mcp-diagram-server): This server is explicitly optimized to **map markdown text directly into mind maps** and structural flowcharts. It includes built-in indentation detection and auto-saves artifacts into a dedicated library directory. \[[1](https://github.com/angrysky56/mcp-diagram-server)\]
+    
+7.  **drawio-diagramming Plugin**: Allows Claude to parse your technical specifications and output editable .drawio XML files or structural SVGs natively embedded into your repository
     
 
 "Skills" for Lightweight, No-Script Automations
