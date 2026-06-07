@@ -22,7 +22,7 @@ Extending Ecosystems with Model Context Protocol (MCP)
 
 Model Context Protocol (MCP) connectors allow your terminal-based AI agent to interface securely with cloud-synced canvas platforms and specialized local rendering engines. Rather than relying on simple text output, these servers give the AI direct visual capabilities:
 
-1.  **Eraser Model Context Protocol (MCP)** server or the **Eraser Agent Skills CLI**. Both solutions integrate directly with OpenCode or other AI coding assistants (like Claude Code and Cursor) to convert code strings, notes, or prompts into structured Eraser Diagrams-as-Code.
+1.  **Eraser Model Context Protocol (MCP)** server or the Eraser Agent Skills CLI. Both solutions integrate directly with OpenCode or other AI coding assistants (like Claude Code and Cursor) to convert code strings, notes, or prompts into structured Eraser Diagrams-as-Code.
     
 2.  **Excalidraw MCP:** The most reliable setup for interactive, editable diagrams. The agent parses your Markdown text, renders it into component nodes, and generates an interlocking canvas JSON file that you can immediately tweak in your web browser.
     
@@ -45,6 +45,14 @@ In OpenCode and Claude Code, "Skills" are manifest-first Markdown configuration 
 *   **Architecture Documentation Skill:** This skill analyzes the deep structure of your codebase and dynamically injects C4 component or deployment maps straight into your system files. It can be initialized via:npx skills add \[https://github.com/melodic-software/claude-code-plugins\](https://github.com/melodic-software/claude-code-plugins) --skill architecture-documentation
     
 *   **Oh-My-Mermaid (omm-scan):** A lightweight, syntax-focused skill tailored to parse textual layouts and recursively compile native Markdown .mmd blocks into instant previews. It can be installed globally via:npm install -g oh-my-mermaid && omm setup
+    
+*   [**Cocoon-AI Architecture Diagram Generator**](https://github.com/Cocoon-AI/architecture-diagram-generator): The leading tool in this space. It directs the AI agent to turn plain text or Markdown into beautiful, modern, dark-themed architecture diagrams saved as standalone HTML/SVG files. No extra visual software is required.
+    
+*   **Agents365 Draw.io Skill**: A zero-config skill that auto-positions and aligns diagrams. It boasts an inventory of over 10,000 official shapes (AWS, GCP, Kubernetes) and includes an automated self-check loops to fix overlapping text or misaligned lines.
+    
+*   [**Markdown Viewer Agent Skills**](https://github.com/markdown-viewer/skills): A massive ecosystem featuring 14 distinct visual skills spanning across 5 rendering engines. It includes enterprise architecture mapping rules natively optimized for standard arkdown text code blocks.
+    
+*   [**Coleam00 Excalidraw Skill**](https://github.com/coleam00/excalidraw-diagram-skill): Teaches your OpenCode agent how to generate structured JSON data that instantly compiles into a sketch-style Excalidraw map. \[[1](https://www.youtube.com/watch?v=m3fqyXZ4k4I&vl=en), [2](https://github.com/coleam00/excalidraw-diagram-skill)\]
     
 
 Implementation Guide: Getting Started on OpenCode
