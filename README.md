@@ -10,7 +10,7 @@ To make the architecture understandable, traceable, and modular, the documentati
 
 *   **📈 [Business Architecture](./docs/design/01-business-architecture.md)**
     *   *The Strategic Vision:* The transition from "Ticket-Based Requests" to the "Autonomous Engineering Loop." Explains business capability maps, value stream mapping, and the core ROI.
-*   **🏛️ [Solution Design](./docs/design/02-solution-design.md)**
+*   **🏛️ [Solution Design](./docs/design/02-techninal-artchitecture.md)**
     *   *The Strategic Blueprint:* Conceptual 5-layer architecture stack, Deep-Dives for each layer, and the **Architecture Decision Log (ADL)**.
 *   **🤖 [Agent Orchestration](./docs/design/03-agent-orchestration.md)**
     *   *The Intelligence Layer:* Explains the human-in-the-loop VS Code Cockpit, the Agent Orchestrator engine logic, and the specialized agent role responsibility matrix (BA, Architect, DE, QA, etc.).
