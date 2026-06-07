@@ -8,15 +8,15 @@ An enterprise-grade blueprint for an AI-driven, collaborative data engineering p
 
 To make the architecture understandable, traceable, and modular, the documentation is split into specialized domains. Click below to explore:
 
-*   **📈 [Business Architecture](./docs/design/0-business-architecture.md)**
+*   **📈 [Business Architecture](./docs/design/01-business-architecture.md)**
     *   *The Strategic Vision:* The transition from "Ticket-Based Requests" to the "Autonomous Engineering Loop." Explains business capability maps, value stream mapping, and the core ROI.
-*   **🏛️ [Solution Design](./docs/design/01-solution-design.md)**
+*   **🏛️ [Solution Design](./docs/design/02-solution-design.md)**
     *   *The Strategic Blueprint:* Conceptual 5-layer architecture stack, Deep-Dives for each layer, and the **Architecture Decision Log (ADL)**.
-*   **🤖 [Agent Orchestration](./docs/design/agent-orchestration.md)**
+*   **🤖 [Agent Orchestration](./docs/design/03-agent-orchestration.md)**
     *   *The Intelligence Layer:* Explains the human-in-the-loop VS Code Cockpit, the Agent Orchestrator engine logic, and the specialized agent role responsibility matrix (BA, Architect, DE, QA, etc.).
-*   **🔌 [Model Context Protocol (MCP) Catalog](./docs/design/mcp-catalog.md)**
+*   **🔌 [Model Context Protocol (MCP) Catalog](./docs/design/05-mcp-catalog.md)**
     *   *The Connectivity Gateway:* The standard interface listing of the 38+ configured servers utilized by the swarm to securely explore systems (Fabric, M365, Postgres, Tavily, etc.).
-*   **⚙️ [Engineering Operations & Pipeline](./docs/design/engineering-operations.md)**
+*   **⚙️ [Engineering Operations & Pipeline](./docs/design/04-engineering-operations.md)**
     *   *The Delivery Layer:* Explains the automated CI/CD security audit gates, the Medallion Data Pipeline (Bronze $\rightarrow$ Silver $\rightarrow$ Gold), and the core ecosystem tool inventory.
 
 ---
